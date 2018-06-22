@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "img-lint: find heavy images in your project"
+date: 2018-06-22
+published: true
+---
+
+Serving compressed images should be the 1st step of any website optimization. You can imagine how I was surprised when found 2Mb PNG image on our pricing page. Loaded via background-image. :grimacing:
+
+<!--more-->
+
+## Intro
+
+Long story short: I've found 2Mb image in our [majestic monolith](https://m.signalvnoise.com/the-majestic-monolith-29166d022228) Rails app. On a pricing page. Oh, snap. Image users go to this beautifully designed pricing page and then wait. Then wait a little more and see that this image is slowly showing up. And then they leave. Forever. We should do smth about it!
+
+
+## img vs background-image
+
+Wait, it's not all. What can be worse than 2Mb PNG image on the page? Only 2Mb PNG image on the page loaded via background-image. Problem with this approach is that browser will start downloading it only after CSS files are downloaded and parsed (i.e. too late). More on this topic in [this CSSWizardry article](https://csswizardry.com/2018/06/image-inconsistencies-how-and-when-browsers-download-images/).
+
+## Next steps
+
+1. Let's move this image to an <img> tag. In case you're asking "Wait, but what about media queries?" I'd like to introduce you to [Responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images). Responsive images – meet my colleague (you), colleague – meet responsive images.
+
+2. Let's compress the image. If you have just a couple – you can use some online tool, I like [compressor.io](https://compressor.io/). If you have many images to optimize then take a look at [ImageOptim](https://imageoptim.com/mac) Mac/web app or [image_optim](https://github.com/toy/image_optim) Ruby library. Hardcore mode would be [guetzli](https://github.com/google/guetzli) – an image compression library from Google which takes quite some time to compress images but the result is 20% smaller then already compressed image.
+
+3. Detect all heavy images in the project. What's heavy? IMO it's smth like 150Kb or more. I've made a little (no dependancies) Ruby library which lists all images heavier certain threshold:
+
+~~~
+gem install img-lint
+img-lint -p /path/to/my/project -m 150
+~~~
+
+<figure>
+  <img src="/images/posts/img-lint/terminal.png" width="100%" />
+  <figcaption>Running img-lint from Terminal</figcaption>
+</figure>
+
+[img-lint](https://github.com/makaroni4/img-lint) is an open source Ruby library, check it out [on Github](https://github.com/makaroni4/img-lint). It has almost no dependencies, so it'll be super quick to install and check your project. How many heavy images you've found? Happy compressing :beers:
