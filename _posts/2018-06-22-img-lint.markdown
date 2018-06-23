@@ -20,7 +20,7 @@ Wait, it's not all. What can be worse than 2Mb PNG image on the page? Only 2Mb P
 
 ## Next steps
 
-1. Let's move this image to an <img> tag. In case you're asking "Wait, but what about media queries?" I'd like to introduce you to [Responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images). Responsive images – meet my colleague (you), colleague – meet responsive images.
+1. Let's move this image to an `<img>` tag. In case you're asking "Wait, but what about media queries?" I'd like to introduce you to [Responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images). Responsive images – meet my colleague (you), colleague – meet responsive images.
 
 2. Let's compress the image. If you have just a couple – you can use some online tool, I like [compressor.io](https://compressor.io/). If you have many images to optimize then take a look at [ImageOptim](https://imageoptim.com/mac) Mac/web app or [image_optim](https://github.com/toy/image_optim) Ruby library. Hardcore mode would be [guetzli](https://github.com/google/guetzli) – an image compression library from Google which takes quite some time to compress images but the result is 20% smaller then already compressed image.
 
