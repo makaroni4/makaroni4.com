@@ -16,7 +16,9 @@ permalink: projects
   <div class="projects-page__content">
     {% for project in site.data.projects %}
       <div class="projects-page__project project">
-        <img class="project__thumbnail" src="/images/projects/thumbnails/{{ project.thumbnail }}" alt="{{ project.name }}" />
+        <div class="project__thumbnail-placeholder" data-src="/images/projects/thumbnails/{{ project.thumbnail }}">
+          {{ project.name }}
+        </div>
 
         <div class="project__created-at">
           {{ project.created_at }}
