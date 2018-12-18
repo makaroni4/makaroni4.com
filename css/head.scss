@@ -411,13 +411,23 @@ img.emoji {
 
 .projects-page {
   &__title {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
     font-family: 'Cabin', sans-serif;
     font-weight: bold;
     font-size: 36px;
     line-height: 45px;
     color: $dark-blue;
+  }
+
+  &__description {
+    margin-bottom: 40px;
+
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: $copy-black;
   }
 
   &__content {
