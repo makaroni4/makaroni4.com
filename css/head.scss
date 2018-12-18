@@ -409,6 +409,99 @@ img.emoji {
   }
 }
 
+.projects-page {
+  &__title {
+    margin-bottom: 40px;
+
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    color: $dark-blue;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__project {
+    width: 300px;
+    margin-bottom: 40px;
+  }
+}
+
+.project {
+  &__thumbnail {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+
+    background-color: #F1F1F1;
+  }
+
+  &__created-at {
+    margin-bottom: 10px;
+
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $darker-grey;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: $dark-blue;
+  }
+
+  &__description {
+    margin-bottom: 10px;
+
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: $copy-black;
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__menu-link {
+    padding: 4px 8px;
+
+    border: 1px solid $darkest-grey;
+    border-radius: 13px;
+
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $darker-grey;
+
+    & + & {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      border-color: $shiny-blue;
+
+      background-color: $shiny-blue;
+
+      color: $white;
+    }
+  }
+}
+
 @include media("<=phone") {
   .header {
     display: flex;

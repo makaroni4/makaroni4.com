@@ -1,0 +1,46 @@
+---
+layout: default
+title: "Projects"
+permalink: projects
+---
+
+<div class="projects-page">
+  <div class="projects-page__title">
+    Projects
+  </div>
+
+  <div class="projects-page__content">
+    {% for project in site.data.projects %}
+      <div class="projects-page__project project">
+        <div class="project__thumbnail">
+        </div>
+
+        <div class="project__created-at">
+          {{ project.created_at }}
+        </div>
+
+        <div class="project__name">
+          {{ project.name }}
+        </div>
+
+        <div class="project__description">
+          {{ project.description }}
+        </div>
+
+        <div class="project__menu">
+          {% if project.website_url %}
+            <a class="project__menu-link" href="{{ project.website_url }}">Website</a>
+          {% endif %}
+
+          {% if project.github_url %}
+            <a class="project__menu-link" href="{{ project.github_url }}">Github</a>
+          {% endif %}
+
+          {% if project.blog_post_url %}
+            <a class="project__menu-link" href="{{ project.blog_post_url }}">Read blog post</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
