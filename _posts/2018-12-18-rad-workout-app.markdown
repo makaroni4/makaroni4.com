@@ -11,7 +11,7 @@ Say, you've made a little browser app, in our case it'll be a workout app. It's 
 
 ## Intro
 
-Here's our workout browser app, note a workouts counter below the "Start workout" button:
+Note a workouts counter below the "Start workout" button:
 
 <figure>
   <img src="/images/posts/firebase_counter/rad_workout_app_snapshot.jpg" width="600px" />
@@ -22,7 +22,7 @@ We want to increment the counter every time someone clicks on it.
 
 ## Firebase
 
-[Firebase](https://firebase.google.com/) is a database platform from Google designed to power all your apps – iOS, Android, Web and more. So you can focus on development the app and not managing the database. Firebase has tons of products (different types of databases, ML and A/B-testing kits), but we'll focus our attention on Firebase Realtime Database – cloud-hosted NoSQL DB. It's free up to 1Gb storage and 100 simultaneous connections, exactly what we need to implement a simple counter for our serverless browser application.
+[Firebase](https://firebase.google.com/) is a database platform from Google designed to power all your apps – iOS, Android, Web and more. So you can focus on development the app and not managing the database. Firebase has tons of products (different types of databases, ML and A/B-testing kits), but we'll focus on Firebase Realtime Database – cloud-hosted NoSQL DB. It's free up to 1Gb storage and 100 simultaneous connections, exactly what we need to implement a simple counter for our serverless browser application.
 
 <p data-height="661" data-theme-id="dark" data-slug-hash="jXyRYb" data-default-tab="js,result" data-user="makaroni4" data-pen-title="Incremental counter via Firebase" class="codepen">See the Pen <a href="https://codepen.io/makaroni4/pen/jXyRYb/">Incremental counter via Firebase</a> by Anatoli (<a href="https://codepen.io/makaroni4">@makaroni4</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -32,11 +32,11 @@ We want to increment the counter every time someone clicks on it.
   <figcaption>This is how data looks like in the UI of Realtime Database</figcaption>
 </figure>
 
-See how simple it is? We just loaded Firebase from Google CDN, initialized our DB and we're ready to read and write from the database. Wait a second, read and write from the database? What about security? Out of the box there's a read & write permission for every user to your Realtime Database. Scary, right? Let's see how easy it is to configure the access:
+See how simple it is? We just loaded Firebase from Google CDN, initialized our DB and we're ready to read and write from the database. Wait a second, read and write from the database? What about security? Out of the box there's a read & write permission for every user to your Realtime Database. Scary, right? Let's see how we can configure the access:
 
 <script src="https://gist.github.com/makaroni4/11977820558ea9e93d6bc99f944d4b88.js"></script>
 
-As you can see it's just a JSON file. There are 3 keys to configure security: `.read`, `.write` and `.validate`. We store our counter in `incremental_counter` key of the DB, so let's define a special security rules for it. We'll allow everyone to read the data of this key by setting `.read` to `true`. Writing is a bit trickier: ideally we would allow only increments of one. In the config above you see how it's done – we write plain JS to verify that our new value is a number and it equals to the current value plus one. `newData` here is a predefined variable we can use (there are a bunch more, for example `data` – reference to the data before our transaction [etc](https://firebase.google.com/docs/database/security/securing-data)).
+The config is a JSON file with 3 keys to descrube security rules: `.read`, `.write` and `.validate`. We'll enable access only to the key where we store our counter (`incremental_counter`). To allow only increments of one we can write plain JS and use some predefined variables (`newData` – the value we're about to write, `data` – old value [etc](https://firebase.google.com/docs/database/security/securing-data)).
 
 With such validations we can easily make a "backend" for many applications: voting, polls and quizzes, NPS scores and so on. As for our workout app: check out the final implementation with Vue.js at [https://makaroni4.github.io/rad-workout-app/#/](https://makaroni4.github.io/rad-workout-app/#/). One detail you might like – the value of the animated and counted up from 0 to the value.
 
