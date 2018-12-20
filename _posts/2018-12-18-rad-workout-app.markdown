@@ -27,19 +27,17 @@ We want to increment the counter every time someone clicks on it.
 <p data-height="661" data-theme-id="dark" data-slug-hash="jXyRYb" data-default-tab="js,result" data-user="makaroni4" data-pen-title="Incremental counter via Firebase" class="codepen">See the Pen <a href="https://codepen.io/makaroni4/pen/jXyRYb/">Incremental counter via Firebase</a> by Anatoli (<a href="https://codepen.io/makaroni4">@makaroni4</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-See how simple it is? We just loaded Firebase from Google CDN, initialized our DB and we're ready to read and write from the database. Wait a second, read and write from the database? What about security? Out of the box there's a read & write permission for every user to your Realtime Database, but one can easily configure access and make it as sophisticated as needed.
-
 <figure>
   <img src="/images/posts/firebase_counter/realtime_db_data.png" width="600px" />
   <figcaption>This is how data looks like in the UI of Realtime Database</figcaption>
 </figure>
 
-Let's look at the security config of our incremental counter:
+See how simple it is? We just loaded Firebase from Google CDN, initialized our DB and we're ready to read and write from the database. Wait a second, read and write from the database? What about security? Out of the box there's a read & write permission for every user to your Realtime Database. Scary, right? Let's see how easy it is to configure the access:
 
 <script src="https://gist.github.com/makaroni4/11977820558ea9e93d6bc99f944d4b88.js"></script>
 
-As you can see it's just a JSON file. There are 3 keys to configure security: `.read`, `.write` and `.validate`. We store our counter in `incremental_counter` key of the DB, so let's define a special security rules for it. We'll allow everyone to read the data by setting `.read` to `true`. There are many approaches on how to secure writing here: we may want only 1 increment per user (as in voting), we probably want increments of 1 at a time etc. In the config above you see the basic validation – that our new value is a number and it equals to the current value plus one. Simple, right? Here's an [intro to Firebase security](https://firebase.google.com/docs/database/security/quickstart) and more [advanced settings](https://firebase.google.com/docs/database/security/securing-data).
+As you can see it's just a JSON file. There are 3 keys to configure security: `.read`, `.write` and `.validate`. We store our counter in `incremental_counter` key of the DB, so let's define a special security rules for it. We'll allow everyone to read the data of this key by setting `.read` to `true`. Writing is a bit trickier: ideally we would allow only increments of one. In the config above you see how it's done – we write plain JS to verify that our new value is a number and it equals to the current value plus one. `newData` here is a predefined variable we can use (there are a bunch more, for example `data` – reference to the data before our transaction [etc](https://firebase.google.com/docs/database/security/securing-data)).
 
-As you can see with such validations we can easily make a "backend" for many applications: voting, polls and quizzes, NPS scores and so on. As for our workout app: check out the final implementation with Vue.js at [https://makaroni4.github.io/rad-workout-app/#/](https://makaroni4.github.io/rad-workout-app/#/), where counter is wrapped into a Vue component and the number is animated.
+With such validations we can easily make a "backend" for many applications: voting, polls and quizzes, NPS scores and so on. As for our workout app: check out the final implementation with Vue.js at [https://makaroni4.github.io/rad-workout-app/#/](https://makaroni4.github.io/rad-workout-app/#/). One detail you might like – the value of the animated and counted up from 0 to the value.
 
 I hope it was a useful read for you, just in case you were looking for the full source of the Vue app – here's a [Github repo](https://github.com/makaroni4/rad-workout-app). Cheers! :beers:
