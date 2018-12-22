@@ -567,11 +567,14 @@ img.emoji {
 
   &__posts {
     display: flex;
+    justify-content: space-between;
   }
 
   &__post {
+    width: 50%;
+
     & + & {
-      margin-left: 10px;
+      margin-left: 20px;
     }
   }
 }
@@ -680,9 +683,11 @@ img.emoji {
     }
 
     &__post {
+      width: 100%;
+
       & + & {
         margin-left: 0;
-        margin-top: 10px;
+        margin-top: 20px;
       }
     }
   }
