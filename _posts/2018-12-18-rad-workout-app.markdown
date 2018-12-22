@@ -3,6 +3,7 @@ layout: post
 title: "Making a serverless incremental counter for a static webpage via Firebase"
 date: 2018-12-18
 published: true
+related_posts: ["/2017/07/10/guitar-bro/", "/2018/06/22/img-lint/"]
 ---
 
 Say, you've made a little browser app, in our case it'll be a workout app. It's just a static web page hosted on Github pages. Now we want to show the number of workouts completed. As the title suggests, we don't need to set up a server ourselves to make it happen.

@@ -172,6 +172,10 @@ body {
     margin-top: 50px;
   }
 
+  &__recommended-posts {
+    margin-top: 50px;
+  }
+
   &__comments {
     margin-top: 50px;
   }
@@ -546,6 +550,73 @@ img.emoji {
   }
 }
 
+.recommended-posts {
+  padding-top: 10px;
+
+  border-top: 1px solid $darker-grey;
+
+  &__header {
+    margin-bottom: 20px;
+
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2em;
+    color: $darkest-grey;
+  }
+
+  &__posts {
+    display: flex;
+  }
+
+  &__post {
+    & + & {
+      margin-left: 10px;
+    }
+  }
+}
+
+.recommended-post {
+  display: block;
+  $r: &;
+
+  &__created-at {
+    margin-bottom: 10px;
+
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $darker-grey;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: $dark-blue;
+  }
+
+  &__excerpt {
+    margin-bottom: 10px;
+
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: $copy-black;
+  }
+
+  &:hover {
+    #{$r}__title {
+      text-decoration: underline;
+    }
+  }
+}
+
 @include media("<=phone") {
   .header {
     display: flex;
@@ -601,5 +672,18 @@ img.emoji {
 
   .project {
     width: 100%;
+  }
+
+  .recommended-posts {
+    &__posts {
+      flex-direction: column;
+    }
+
+    &__post {
+      & + & {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
   }
 }
