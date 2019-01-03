@@ -16,9 +16,10 @@ permalink: projects
   <div class="projects-page__content">
     {% for project in site.data.projects %}
       <div class="projects-page__project project">
-        <div class="project__thumbnail-placeholder" data-src="/images/projects/thumbnails/{{ project.thumbnail }}">
+
+        <a class="project__thumbnail-placeholder" data-src="/images/projects/thumbnails/{{ project.thumbnail }}" href="{{ project.website_url | default: project.github_url }}" target="_blank">
           {{ project.name }}
-        </div>
+        </a>
 
         <div class="project__created-at">
           {{ project.created_at }}
