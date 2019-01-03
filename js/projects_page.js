@@ -12,5 +12,15 @@ $(function() {
     $img.attr("alt", $placeholder.alt);
 
     $placeholder.append($img);
+
+    if($placeholder.data("hoverSrc")) {
+      $placeholder.on("mouseenter", function() {
+        $(this).find(".project__thumbnail").attr("src", $(this).data("hoverSrc"));
+      });
+
+      $placeholder.on("mouseleave", function() {
+        $(this).find(".project__thumbnail").attr("src", $(this).data("src"));
+      });
+    }
   })
 });

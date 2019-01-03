@@ -17,7 +17,7 @@ permalink: projects
     {% for project in site.data.projects %}
       <div class="projects-page__project project">
 
-        <a class="project__thumbnail-placeholder" data-src="/images/projects/thumbnails/{{ project.thumbnail }}" href="{{ project.website_url | default: project.github_url }}" target="_blank">
+        <a class="project__thumbnail-placeholder" data-src="/images/projects/thumbnails/{{ project.thumbnail }}" data-hover-src="{{ project.thumbnail_gif }}" href="{{ project.website_url | default: project.github_url }}" target="_blank">
           {{ project.name }}
         </a>
 

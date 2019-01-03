@@ -16,6 +16,7 @@
   created_at: 02.16.2017
   description: Guitar Hero with real guitar in your browser (JS Audio API and FFT)
   thumbnail: guitar_bro.jpg
+  thumbnail_gif: /images/posts/guitar_bro/guitar_bro.gif
   github_url: https://github.com/makaroni4/guitar_bro
   website_url: https://makaroni4.github.io/guitar_bro/
   blog_post_url: http://localhost:4000/2017/07/10/guitar-bro/
