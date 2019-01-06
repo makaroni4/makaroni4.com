@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Crossbrowser solution for styling broken images"
-date: 2019-01-05
+title:  "Cross browser solution for styling broken images"
+date: 2019-01-06
 published: true
 ---
 
@@ -56,11 +56,11 @@ This is a live example of this approach:
 <p data-height="300" data-theme-id="0" data-slug-hash="maxQem" data-default-tab="result" data-user="makaroni4" data-pen-title="Broken image styling with :before pseudo element" class="codepen">See the Pen <a href="https://codepen.io/makaroni4/pen/maxQem/">Broken image styling with :before pseudo element</a> by Anatoli (<a href="https://codepen.io/makaroni4">@makaroni4</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-It's very elegant, CSS-only. It has a major drawback though – it doesn't work in Safari (neither on desktop nor on mobile) :warning: For example, this blog has about 30% of visits from Safari. It is simply unexeptable.
+It's very elegant, CSS-only. It has a major drawback though – it doesn't work in Safari (neither on desktop nor on mobile) :warning: For example, this blog has about 30% of visits from Safari. It is simply unacceptable.
 
 ## JS solution
 
-It's quite hard to think of a pure CSS solution which would be 100% crossbrowser. Let's use `onerror` event handler which is [supported by all browsers](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Browser_compatibility). We'll simply replace broken image tag with a div of the same size, fill it with gradient and use `alt` tag's content. IMO it's the best way, because it keeps our `<img>` tags untouched (so we don't need to extra markup manually). Here's a JS snippet with solution:
+It's quite hard to think of a pure CSS solution which would be 100% cross browser. Let's use `onerror` event handler which is [supported by all browsers](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Browser_compatibility). We'll simply replace broken image tag with a div of the same size, fill it with gradient and use `alt` tag's content. IMO it's the best way because it keeps our `<img>` tags untouched (so we don't need to extra markup manually). Here's a JS snippet with the solution:
 
 ```js
 document.querySelector(".img").onerror = function() {
