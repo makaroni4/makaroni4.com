@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WSLPDMF');</script>
-    <!-- End Google Tag Manager -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/head.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Inconsolata:400,700|Merriweather:300" rel="stylesheet">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/images/favicon.gif" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Inconsolata:400,700|Merriweather:300" rel="stylesheet">
 
     {% feed_meta %}
-
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/head.css">
   </head>
 
   <body>
@@ -99,5 +93,12 @@
       <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
       <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
     {% endif %}
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WSLPDMF');</script>
+    <!-- End Google Tag Manager -->
   </body>
   </html>

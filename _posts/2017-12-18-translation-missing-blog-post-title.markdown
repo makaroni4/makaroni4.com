@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "translation missing: en.blog_post.title"
+description: "Always enable translation missing exceptions in Rails, so you don't have them on live website."
 date: 2017-12-18
 published: true
 ---

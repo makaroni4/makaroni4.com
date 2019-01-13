@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Making a serverless incremental counter for a static webpage via Firebase"
+description: "Let's explore the way of shipping a static page with some dynamic content that is synced between all users via Firebase."
 date: 2018-12-18
 published: true
 related_posts: ["/2017/07/10/guitar-bro/", "/2018/06/22/img-lint/"]

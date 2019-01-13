@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Benchmarking with Ruby"
+description: "Let's explore benchmarking in the Ruby world"
 date: 2012-05-22
 categories: ruby benchmarking
 published: true
