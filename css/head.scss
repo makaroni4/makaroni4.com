@@ -93,6 +93,10 @@ body {
 
     a {
       border-bottom: 1px solid $copy-black;
+
+      &:hover {
+        opacity: 0.6;
+      }
     }
 
     p,
