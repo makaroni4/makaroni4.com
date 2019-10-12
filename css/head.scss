@@ -21,10 +21,28 @@ body {
   color: $darkest-grey;
 }
 
-.avatar {
-  border-radius: 46px;
+.about-the-author {
+  display: flex;
+  align-items: center;
 
-  @include at2x("avatar", 92px, 92px);
+  &__avatar {
+    flex-shrink: 0;
+    margin-right: 24px;
+
+    border-radius: 46px;
+
+    @include at2x("avatar", 92px, 92px);
+  }
+
+  &__description {
+    font-family: 'Inconsolata', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+
+    a {
+      text-decoration: underline;
+    }
+  }
 }
 
 .page {
@@ -35,6 +53,10 @@ body {
     margin: 0 auto;
 
     margin-top: 30px;
+  }
+
+  &__post {
+    margin-top: 60px;
   }
 
   &__posts-list {
@@ -739,14 +761,6 @@ img.emoji {
 
   .page {
     padding: 0 10px 40px;
-
-    &__posts-list {
-      margin-top: 0;
-    }
-
-    &__avatar {
-      display: none;
-    }
 
     &__body {
       width: 100%;
