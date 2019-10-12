@@ -1,3 +1,9 @@
+- name: SQL Habit
+  created_at: 01.09.2019
+  description: Online course that teaches data and SQL for Product or Marketing from 0 to Super Advanced
+  thumbnail: sqlhabit.jpg
+  website_url: https://www.sqlhabit.com
+
 - name: Youtube Time Tracker
   created_at: 11.01.2019
   description: Chrome Extension that tracks time you spent on Youtube
