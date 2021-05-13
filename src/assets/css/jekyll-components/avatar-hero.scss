@@ -1,0 +1,17 @@
+@import "../design-system.scss";
+
+.avatar-hero {
+  padding: $px32 0;
+
+  background-color: #222222;
+
+  color: $white;
+
+  &__headline {
+    margin: 0 0 $px24;
+  }
+
+  &__subheadline {
+
+  }
+}

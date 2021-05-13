@@ -60,7 +60,7 @@ module.exports = {
     loaderOptions: {
       sass: {
         data: `
-          @import "@/assets/css/_design_system.scss";
+          @import "@/assets/css/design-system.scss";
         `,
       },
     },
