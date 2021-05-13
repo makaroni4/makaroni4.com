@@ -28,47 +28,7 @@
   <body>
     <div class="page">
       <div class="page__header">
-        <header class="header">
-          <div class="b-head__nav">
-            <ul class="b-menu">
-              {% if page.url == '/' %}
-                <li class="b-menu__item b-menu__item--active">
-                  POSTS
-                </li>
-              {% else %}
-                <li class="b-menu__item">
-                  <a href="/">
-                    POSTS
-                  </a>
-                </li>
-              {% endif %}
-
-              {% if page.url == '/projects' %}
-                <li class="b-menu__item b-menu__item--active">
-                  PROJECTS
-                </li>
-              {% else %}
-                <li class="b-menu__item">
-                  <a href="/projects">
-                    PROJECTS
-                  </a>
-                </li>
-              {% endif %}
-
-              {% if page.url == '/about' %}
-                <li class="b-menu__item b-menu__item--active">
-                  ABOUT
-                </li>
-              {% else %}
-                <li class="b-menu__item">
-                  <a href="/about">
-                    ABOUT
-                  </a>
-                </li>
-              {% endif %}
-            </ul>
-          </div>
-        </header>
+        {% include header.html %}
       </div>
 
       <div class="page__body">
