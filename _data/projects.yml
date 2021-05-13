@@ -43,6 +43,7 @@
 
 - name: Sandi Meter
   created_at: 12.06.2013
+  thumbnail: sandi_meter.jpg
   description: Ruby static analysis tool inspired by Sandi Metz conference talk
   github_url: https://github.com/makaroni4/sandi_meter
 
@@ -55,5 +56,6 @@
 
 - name: Heartrate
   created_at: 26.05.2017
+  thumbnail: bluetooth_heartrate.jpg
   description: Connect your Bluetooth heartrate monitor to your computer
   github_url: https://github.com/makaroni4/bluetooth_node
