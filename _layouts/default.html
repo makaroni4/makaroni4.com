@@ -26,11 +26,6 @@
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSLPDMF"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <div class="page">
       <div class="page__header">
         <header class="header">
@@ -80,14 +75,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-offset-2 col-sm-8">
             <div class="page__avatar">
-              <div class="about-the-author">
-                <div class="about-the-author__avatar">
-                </div>
-
-                <div class="about-the-author__description">
-                  Hi, my name is Anatoli, I'm a Software Engineer from Berlin. During the day I work in Growth Team @ Blinkist. During the night I'm an Indie Maker of <a href="https://www.sqlhabit.com" target="_blank">SQL Habit</a> – online course that teaches data and SQL for Product and Marketing from 0 to Advanced.
-                </div>
-              </div>
+              {% include hero.html %}
             </div>
           </div>
         </div>
@@ -100,17 +88,7 @@
       </div>
     </div>
 
-    {% if page.collection == "posts" %}
-      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-      <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-    {% endif %}
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WSLPDMF');</script>
-    <!-- End Google Tag Manager -->
+    {% include gtm.html %}
 
     <script type="text/javascript" src="/js/app.js"></script>
 

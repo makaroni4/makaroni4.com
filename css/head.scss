@@ -188,16 +188,6 @@ body {
     margin-top: 50px;
   }
 
-  &__newsletter-form {
-    display: none;
-
-    margin-top: 50px;
-
-    &--active {
-      display: block;
-    }
-  }
-
   &__comments {
     margin-top: 50px;
   }
@@ -648,110 +638,6 @@ img.emoji {
   }
 }
 
-.newsletter-form {
-  padding: 20px;
-  position: relative;
-
-  border-radius: 4px;
-
-  background-color: $yellow;
-
-  &__close {
-    position: absolute;
-    top: 10px;
-    right: 12px;
-
-    font-family: 'Inconsolata', monospace;
-    font-size: 14px;
-    line-height: 1.2em;
-    color: $darker-grey;
-    text-decoration: underline;
-  }
-
-  &__header {
-    font-family: 'Cabin', sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    color: $dark-blue;
-  }
-
-
-  &__description {
-    margin-top: 10px;
-
-    font-family: 'Merriweather', serif;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 32px;
-    color: $copy-black;
-
-    a {
-      text-decoration: underline;
-    }
-  }
-
-  &__form-container {
-    margin-top: 15px;
-  }
-
-  &__form {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__input {
-    padding: 12px;
-
-    border-radius: 4px;
-
-    background-color: $bg-white;
-
-    font-family: 'Merriweather', serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.2em;
-    color: $copy-black;
-
-    & + & {
-      margin-left: 10px;
-    }
-  }
-
-  &__text-input {
-    width: 100%;
-
-    &.mce_inline_error {
-      border: 2px solid $red !important;
-    }
-  }
-
-  &__submit {
-    padding: 12px 30px;
-    margin-left: 10px;
-
-    border-radius: 25px;
-
-    background-color: $shiny-blue;
-
-    color: $white;
-
-    cursor: pointer;
-
-    &:hover {
-      background-color: #1B6FFF;
-    }
-  }
-
-  &__success-message {
-    display: none;
-
-    &--active {
-      display: block;
-    }
-  }
-}
-
 @include media("<=phone") {
   .header {
     display: flex;
@@ -819,26 +705,6 @@ img.emoji {
         margin-left: 0;
         margin-top: 20px;
       }
-    }
-  }
-
-  .newsletter-form {
-    padding: 40px 20px;
-
-    &__form {
-      flex-direction: column;
-    }
-
-    &__input {
-      & + & {
-        margin-left: 0;
-        margin-top: 10px;
-      }
-    }
-
-    &__submit {
-      margin-left: 0;
-      margin-top: 10px;
     }
   }
 }
