@@ -2,57 +2,59 @@
 layout: default
 ---
 
-<div class="page__post post">
-  <div class="post__date">
-    {{ page.date | date_to_string }}
-  </div>
-  <h1 class="post__title">
-    {{ page.title }}
-  </h1>
-
-  <div class="post__content">
-    {{ content }}
-  </div>
-
-  <div class="post__credits">
-    {% include credits.html %}
-  </div>
-
-  {% if page.related_posts %}
-    <div class="post__recommended-posts recommended-posts">
-      <div class="recommended-posts__header">
-        POSTS YOU MIGHT LIKE
-      </div>
-
-      <div class="recommended-posts__posts">
-        {% for related_post_url in page.related_posts %}
-          {% for _post in site.posts %}
-            {% if _post.url == related_post_url %}
-              <a href={{ _post.url }} class="recommended-posts__post recommended-post">
-                <div class="recommended-post__created-at">
-                  {{ _post.date | date_to_string }}
-                </div>
-
-                <div class="recommended-post__title">
-                  {{ _post.title }}
-                </div>
-
-                <div class="recommended-post__excerpt">
-                  {{ _post.excerpt | strip_html }}
-                </div>
-              </a>
-            {% endif %}
-          {% endfor %}
-        {% endfor %}
-      </div>
+<div class="post">
+  <div class="post__container container">
+    <div class="post__date">
+      {{ page.date | date_to_string }}
     </div>
-  {% endif %}
+    <h1 class="post__title">
+      {{ page.title }}
+    </h1>
 
-  <div class="post__comments">
-    <div id="disqus_thread"></div>
+    <div class="post__content">
+      {{ content }}
+    </div>
+
+    <div class="post__credits">
+      {% include credits.html %}
+    </div>
+
+    {% if page.related_posts %}
+      <div class="post__recommended-posts recommended-posts">
+        <div class="recommended-posts__header">
+          POSTS YOU MIGHT LIKE
+        </div>
+
+        <div class="recommended-posts__posts">
+          {% for related_post_url in page.related_posts %}
+            {% for _post in site.posts %}
+              {% if _post.url == related_post_url %}
+                <a href={{ _post.url }} class="recommended-posts__post recommended-post">
+                  <div class="recommended-post__created-at">
+                    {{ _post.date | date_to_string }}
+                  </div>
+
+                  <div class="recommended-post__title">
+                    {{ _post.title }}
+                  </div>
+
+                  <div class="recommended-post__excerpt">
+                    {{ _post.excerpt | strip_html }}
+                  </div>
+                </a>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="post__comments">
+      <div id="disqus_thread"></div>
+    </div>
+
+    {% include disqus.html %}
   </div>
-
-  {% include disqus.html %}
 </div>
 
 <div class="image-popup js-image-popup">

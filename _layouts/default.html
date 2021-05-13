@@ -1,28 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/head.css">
-    {% if jekyll.environment == "production" %}
-      <!-- PRODCSS -->
-      <link rel="stylesheet" href="/css/app.6ae0c849.css">
-    {% endif %}
-
-    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Inconsolata:400,700|Merriweather:300" rel="stylesheet">
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.description }}">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    {% feed_meta %}
+    {% include head.html %}
   </head>
 
   <body>
@@ -32,31 +11,20 @@
       </div>
 
       <div class="page__body">
-        <div class="row">
-          <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-            <div class="page__avatar">
-              {% include hero.html %}
-            </div>
-          </div>
+        <div class="page__hero">
+          {% include avatar_hero.html %}
         </div>
 
-        <div class="row">
-          <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-            {{ content }}
-          </div>
+        <div class="page__content">
+          {{ content }}
         </div>
+      </div>
+
+      <div class="page__footer">
+        {% include footer.html %}
       </div>
     </div>
 
-    {% include gtm.html %}
-
-    {% if jekyll.environment == "production" %}
-      <!-- PRODJS -->
-      <script src="/js/app.b9bd18c2.js"></script>
-    {% endif %}
-
-    {% if jekyll.environment == "development" %}
-      <script src="http://localhost:8080/js/app.js"></script>
-    {% endif %}
+    {% include body_end.html %}
   </body>
-  </html>
+</html>

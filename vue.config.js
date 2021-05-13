@@ -46,5 +46,23 @@ module.exports = {
   },
   chainWebpack: config => {
     config.optimization.splitChunks().clear();
-  }
+
+    // https://www.fabiofranchino.com/blog/inject-svg-in-dom-with-vue/
+    const svgRule = config.module.rule('svg');
+
+    svgRule.uses.clear();
+
+    svgRule
+      .use('vue-svg-loader')
+      .loader('vue-svg-loader');
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `
+          @import "@/assets/css/_design_system.scss";
+        `,
+      },
+    },
+  },
 };

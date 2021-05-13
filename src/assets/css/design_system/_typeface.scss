@@ -1,0 +1,56 @@
+h1 {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 44px;
+  line-height: 56px;
+  font-weight: 800;
+}
+
+h2 {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 800;
+}
+
+h3 {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 800;
+}
+
+.font-large {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+a {
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $grey-1;
+  text-decoration: underline;
+
+  &:hover {
+    color: $grey-3;
+  }
+}
+
+a.font-small {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+i {
+  font-style: italic;
+}
+
+body {
+  // font-family: 'Inconsolata', monospace;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 400;
+}
