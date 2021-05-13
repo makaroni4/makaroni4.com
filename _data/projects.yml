@@ -27,6 +27,7 @@
 
 - name: Focused Youtube
   created_at: 25.06.2018
+  thumbnail: focused_youtube.jpg
   description: Chrome Extension that helps you to stay focused in Youtube
   github_url: https://github.com/makaroni4/focused_youtube
   website_url: https://chrome.google.com/webstore/detail/focused-youtube/nfghbmabdoakhobmimnjkamfdnpfammn?hl=en
