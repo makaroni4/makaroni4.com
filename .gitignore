@@ -4,3 +4,5 @@ _posts/2014-03-25-test-post.markdown
 .sass-cache/
 
 .jekyll-cache
+
+node_modules/
