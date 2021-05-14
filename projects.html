@@ -7,57 +7,16 @@ permalink: projects
 
 <div class="projects-page">
   <div class="projects-page__container container">
-
-
-    <div class="projects-page__title">
+    <h1 class="projects-page__headline">
       Projects
-    </div>
+    </h1>
 
-    <div class="projects-page__description">
+    <div class="projects-page__subheadline">
       I see <i>a project</i> as something other people can use: it doesn't need to be polished, it could be far from perfect. But as long as another human being can have a meaningful interaction with it – a project is <i>live</i>. Here's a collection of projects I've built:
     </div>
 
-    <div class="projects-page__content">
-      {% for project in site.data.projects %}
-        <div class="projects-page__project project">
-
-          <a
-            class="project__thumbnail"
-            data-hover-src="{{ project.thumbnail_gif }}"
-            href="{{ project.website_url | default: project.github_url }}"
-            target="_blank">
-            <img
-              src="/images/projects/thumbnails/{{ project.thumbnail }}"
-              alt="{{ project.name }}">
-          </a>
-
-          <div class="project__created-at">
-            {{ project.created_at }}
-          </div>
-
-          <div class="project__name">
-            {{ project.name }}
-          </div>
-
-          <div class="project__description">
-            {{ project.description }}
-          </div>
-
-          <div class="project__menu">
-            {% if project.website_url %}
-              <a class="project__menu-link" href="{{ project.website_url }}">Website</a>
-            {% endif %}
-
-            {% if project.github_url %}
-              <a class="project__menu-link" href="{{ project.github_url }}">Github</a>
-            {% endif %}
-
-            {% if project.blog_post_url %}
-              <a class="project__menu-link" href="{{ project.blog_post_url }}">Blog post</a>
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
+    <div class="projects-page__projects">
+      {% include project_list.html %}
     </div>
   </div>
 </div>

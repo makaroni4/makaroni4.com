@@ -4,25 +4,20 @@ title: "A blog by @makaroni4"
 description: "@makaroni4 (Anatoli Makarevich) is a software engineer at Blinkist focusing on web and data."
 ---
 
-<div class="posts">
-  <div class="posts__container container">
-    <ul class="posts-list">
-      {% for post in site.posts %}
-        <li class="posts-list__item">
-          <a href="{{post.url}}">
-            <div class="post">
-              <div class="post__date">
-                {{ post.date | date_to_string }}
-              </div>
-              <div class="post__title">
-                {{ post.title }}
-              </div>
-            </div>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
+<div class="index-page">
+  <div class="index-page__hero">
+    {% include avatar_hero.html %}
+  </div>
+
+  <div class="index-page__post-list container">
+    <h2>Posts</h2>
+
+    {% include post_list.html %}
+  </div>
+
+  <div class="index-page__project-list container">
+    <h2>Projects</h2>
+
+    {% include project_list.html %}
   </div>
 </div>
-
-<div id="blog-vue-app"></div>

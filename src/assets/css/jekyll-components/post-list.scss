@@ -1,0 +1,45 @@
+@import "../design-system.scss";
+
+.post-list {
+  &__container {
+
+  }
+
+  &__headline {
+
+  }
+
+  &__year-list {
+    &:not(:last-child) {
+      margin-bottom: $px32;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__year {
+    margin: 0 0 $px8;
+  }
+
+  &__list-item {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: $px16;
+    }
+  }
+
+  &__list-item-date {
+
+  }
+
+  &__list-item-title {
+
+  }
+}

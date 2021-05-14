@@ -1,0 +1,7 @@
+@import "../design-system.scss";
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $px24;
+}

@@ -1,0 +1,11 @@
+@import "../design-system.scss";
+
+.project {
+  &__thumbnail {
+    img {
+      width: 100%;
+
+      border-radius: $px8;
+    }
+  }
+}

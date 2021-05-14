@@ -1,0 +1,44 @@
+<div class="post-list">
+  <div class="post-list__archive">
+    <!-- https://stuntbox.com/blog/2020/07/jekyll-archives-group-posts-by-year/ -->
+
+    {% for post in site.posts %}
+      {% capture year_of_current_post %}
+        {{ post.date | date: "%Y" }}
+      {% endcapture %}
+
+      {% capture year_of_previous_post_in_set %}
+        {{ site.posts[forloop.index].date | date: "%Y" }}
+      {% endcapture %}
+
+      {% if forloop.first %}
+        <div class="post-list__year-list">
+          <h3 class="post-list__year">{{ year_of_current_post }}</h3>
+          <ul class="post-list__list">
+      {% endif %}
+        <li class="post-list__list-item">
+          <a
+            class="post-list__list-item sans-serif"
+            href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </li>
+
+        {% if forloop.last %}
+            </ul>
+          </div>
+        {% else %}
+
+        {% if year_of_current_post != year_of_previous_post_in_set %}
+            </ul>
+          </div>
+
+          <div class="post-list__year-list">
+            <h3 class="post-list__year">{{ year_of_previous_post_in_set }}</h3>
+            <ul class="post-list__list">
+        {% endif %}
+      {% endif %}
+
+    {% endfor %}
+  </div>
+</div>

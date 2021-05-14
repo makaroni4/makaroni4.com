@@ -1,7 +1,7 @@
 - name: Willpower
   created_at: 04.04.2021
   description: Open Source website blocker extension that does not track your data.
-  thumbnail: willpower.png
+  thumbnail: willpower.jpg
   github_url: https://github.com/makaroni4/willpower
   website_url: https://chrome.google.com/webstore/detail/willpower/codkcdmdmljjhncjfkfgjbmiglcfpdgc
 

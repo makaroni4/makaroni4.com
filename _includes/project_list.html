@@ -1,0 +1,41 @@
+<div class="project-list">
+  {% for project in site.data.projects %}
+    <div class="project-list__project project">
+      <a
+        class="project__thumbnail"
+        data-hover-src="{{ project.thumbnail_gif }}"
+        href="{{ project.website_url | default: project.github_url }}"
+        target="_blank">
+        <img
+          src="/images/projects/thumbnails/{{ project.thumbnail }}"
+          alt="{{ project.name }}">
+      </a>
+
+      <div class="project__created-at">
+        {{ project.created_at }}
+      </div>
+
+      <div class="project__name">
+        {{ project.name }}
+      </div>
+
+      <div class="project__description">
+        {{ project.description }}
+      </div>
+
+      <div class="project__menu">
+        {% if project.website_url %}
+          <a class="project__menu-link" href="{{ project.website_url }}">Website</a>
+        {% endif %}
+
+        {% if project.github_url %}
+          <a class="project__menu-link" href="{{ project.github_url }}">Github</a>
+        {% endif %}
+
+        {% if project.blog_post_url %}
+          <a class="project__menu-link" href="{{ project.blog_post_url }}">Blog post</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
