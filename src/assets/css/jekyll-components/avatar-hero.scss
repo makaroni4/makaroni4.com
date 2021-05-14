@@ -1,17 +1,50 @@
 @import "../design-system.scss";
 
 .avatar-hero {
-  padding: $px32 0;
-
-  background-color: #222222;
+  padding: $px72 0 0;
 
   color: $white;
+
+  &__container {
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__wrapper {
+    padding: $px32;
+
+    border-radius: $px8;
+
+    background-color: #4055A8;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 250px;
+  }
 
   &__headline {
     margin: 0 0 $px24;
   }
 
   &__subheadline {
+    margin: 0;
+    padding: 0;
 
+    color: #BED0F7;
+
+    list-style: none;
+  }
+
+  &__avatar {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: $px32;
+    width: $px240;
   }
 }

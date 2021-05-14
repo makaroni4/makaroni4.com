@@ -1,0 +1,17 @@
+@import "../design-system.scss";
+
+.footer {
+  padding: $px48 0 0;
+
+  &__hr {
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    border-top: $px1 solid #E4E7EB;
+  }
+
+  &__body {
+    padding: $px24 0;
+  }
+}

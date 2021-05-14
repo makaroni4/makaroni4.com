@@ -1,43 +1,44 @@
-<header class="header">
+<header class="header sans-serif">
   <div class="header__container container">
     <div class="header__wrapper">
-
-      <div class="header__logo">
-        makaroni4.com
-      </div>
-
-      <ul class="header__menu">
+      <ul class="header__menu font-small">
         {% if page.url == '/' %}
           <li class="header__menu-item header__menu-item--active">
             POSTS
           </li>
         {% else %}
           <li class="header__menu-item">
-            <a href="/">
+            <a
+              class="font-small"
+              href="/">
               POSTS
             </a>
           </li>
         {% endif %}
 
         {% if page.url == '/projects' %}
-          <li class="header__menu-item header__menu-item--active">
+          <li class="header__menu-item header__menu-item--active font-small">
             PROJECTS
           </li>
         {% else %}
           <li class="header__menu-item">
-            <a href="/projects">
+            <a
+              class="font-small"
+              href="/projects">
               PROJECTS
             </a>
           </li>
         {% endif %}
 
         {% if page.url == '/about' %}
-          <li class="header__menu-item header__menu-item--active">
+          <li class="header__menu-item header__menu-item--active font-small">
             ABOUT
           </li>
         {% else %}
           <li class="header__menu-item">
-            <a href="/about">
+            <a
+              class="font-small"
+              href="/about">
               ABOUT
             </a>
           </li>

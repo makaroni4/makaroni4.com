@@ -3,15 +3,13 @@
 .header {
   padding: $px24 0;
 
-  background-color: #222222;
-
   &__wrapper {
     display: flex;
     justify-content: space-between;
   }
 
   &__logo {
-    color: $white;
+    // color: $white;
   }
 
   &__menu {
@@ -23,14 +21,14 @@
   }
 
   &__menu-item {
-    color: $white;
+    // color: $white;
 
     &:not(:last-child) {
-      margin-right: $px8;
+      margin-right: $px16;
     }
 
     a {
-      color: $white;
+      // color: $white;
     }
   }
 }
