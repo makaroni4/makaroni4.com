@@ -12,6 +12,8 @@ import "./assets/css/jekyll-components/post-list.scss";
 import "./assets/css/jekyll-components/project-list.scss";
 import "./assets/css/jekyll-components/project.scss";
 import "./assets/css/jekyll-components/projects-page.scss";
+import "./assets/css/jekyll-components/article-page.scss";
+import "./assets/css/jekyll-components/article-info.scss";
 
 import "./assets/css/vendor/twemoji.scss";
 

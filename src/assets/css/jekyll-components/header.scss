@@ -21,14 +21,27 @@
   }
 
   &__menu-item {
-    // color: $white;
+    position: relative;
 
     &:not(:last-child) {
       margin-right: $px16;
     }
 
-    a {
-      // color: $white;
+    &--active {
+      &:after {
+        display: block;
+        width: 100%;
+        height: $px8;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        z-index: -1;
+
+        background-color: #98AEEB;
+
+        content: "";
+        opacity: 0.7;
+      }
     }
   }
 }

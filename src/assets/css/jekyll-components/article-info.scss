@@ -1,0 +1,25 @@
+@import "../design-system.scss";
+
+.article-info {
+  display: flex;
+  align-items: center;
+
+  &__author-avatar {
+    width: $px64;
+    height: $px64;
+    margin-right: $px16;
+
+    border-radius: 50%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  &__author {
+    margin-bottom: $px8;
+  }
+}

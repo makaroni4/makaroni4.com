@@ -2,25 +2,36 @@
 layout: default
 ---
 
-<div class="post">
-  <div class="post__container container">
-    <div class="post__date">
-      {{ page.date | date_to_string }}
+<div class="article-page">
+  <div class="article-page__container container">
+    <div class="article-page__hero">
+      <h1 class="article-page__headline">
+        <span class="article-page__headline-start-emoji">
+          {{ page.start_emoji }}
+        </span>
+        <span class="article-page__headline-text">
+          {{ page.title }}
+        </span>
+        <span class="article-page__headline-finish-emoji">
+          {{ page.finish_emoji }}
+        </span>
+      </h1>
     </div>
-    <h1 class="post__title">
-      {{ page.title }}
-    </h1>
 
-    <div class="post__content">
+    <div class="article-page__info">
+      {% include article_info.html %}
+    </div>
+
+    <div class="article-page__content">
       {{ content }}
     </div>
 
-    <div class="post__credits">
+    <div class="article-page__credits">
       {% include credits.html %}
     </div>
 
     {% if page.related_posts %}
-      <div class="post__recommended-posts recommended-posts">
+      <div class="article-page__recommended-posts recommended-posts">
         <div class="recommended-posts__header">
           POSTS YOU MIGHT LIKE
         </div>
@@ -30,15 +41,15 @@ layout: default
             {% for _post in site.posts %}
               {% if _post.url == related_post_url %}
                 <a href={{ _post.url }} class="recommended-posts__post recommended-post">
-                  <div class="recommended-post__created-at">
+                  <div class="recommended-article-page__created-at">
                     {{ _post.date | date_to_string }}
                   </div>
 
-                  <div class="recommended-post__title">
+                  <div class="recommended-article-page__title">
                     {{ _post.title }}
                   </div>
 
-                  <div class="recommended-post__excerpt">
+                  <div class="recommended-article-page__excerpt">
                     {{ _post.excerpt | strip_html }}
                   </div>
                 </a>
@@ -49,7 +60,7 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="post__comments">
+    <div class="article-page__comments">
       <div id="disqus_thread"></div>
     </div>
 

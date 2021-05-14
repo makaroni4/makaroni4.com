@@ -1,0 +1,57 @@
+@import "../design-system.scss";
+
+.article-page {
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: $px32;
+    padding: $px96 $px96;
+
+    border-radius: $px8;
+
+    background-color: #4055A8;
+
+    color: $white;
+    text-align: center;
+  }
+
+  &__headline {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+  }
+
+  &__headline-start-emoji {
+    position: absolute;
+    top: -$px32;
+    left: -$px32;
+    z-index: 1;
+
+    font-size: 2em;
+
+    transform: rotate(-25deg);
+  }
+
+  &__headline-finish-emoji {
+    position: absolute;
+    bottom: -$px32;
+    right: -$px32;
+    z-index: 1;
+
+    font-size: 2em;
+
+    transform: rotate(25deg);
+  }
+
+  &__headline-text {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    max-width: $px640;
+  }
+}

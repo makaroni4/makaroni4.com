@@ -3,6 +3,8 @@ layout: post
 title:  "Cross browser solution for styling broken images"
 description: "Let's explore Vanilla JS cross browser solution for styling broken images."
 date: 2019-01-06
+start_emoji: 🖼
+finish_emoji: 🔨
 published: true
 ---
 
