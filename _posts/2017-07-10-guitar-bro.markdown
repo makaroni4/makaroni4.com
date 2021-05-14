@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article_page
 title:  "Meet Guitar Bro – open source browser game that helps you learn notes on guitar"
 description: "This is a story of creating Guitar Bro – open source browser game that helps you learn notes on guitar."
 date: 2017-07-10

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article_page
 title: "Making a serverless incremental counter for a static webpage via Firebase"
 description: "Let's explore the way of shipping a static page with some dynamic content that is synced between all users via Firebase."
 date: 2018-12-18

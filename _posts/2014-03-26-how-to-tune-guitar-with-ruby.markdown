@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article_page
 title:  "How to tune a guitar with Ruby and FFT"
 description: "Let's explore how FFT (Fast Fourier Transform) could be used in Ruby and try to tune a guitar."
 date: 2014-03-26

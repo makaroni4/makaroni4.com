@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article_page
 title:  "Binary search with Ruby and TDD"
 description: "Let's implement a binary search algorithm with Ruby in a TDD fashion, add a bunch of different implementations and benchmark them."
 date: 2012-06-21

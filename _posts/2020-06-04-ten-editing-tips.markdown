@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article_page
 title:  "10 tips for editing with text, HTML markup or code"
 description: "This is a blog post about editing"
 date: 2020-06-04
