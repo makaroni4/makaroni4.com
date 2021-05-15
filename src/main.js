@@ -19,6 +19,8 @@ import "./assets/css/jekyll-components/article-page.scss";
 import "./assets/css/jekyll-components/article-info.scss";
 import "./assets/css/jekyll-components/article-footer.scss";
 import "./assets/css/jekyll-components/share-on-twitter.scss";
+import "./assets/css/jekyll-components/sql-habit-banner.scss";
+import "./assets/css/jekyll-components/small-review.scss";
 
 import "./assets/css/vendor/twemoji.scss";
 import "./assets/css/vendor/code-highlight.scss";

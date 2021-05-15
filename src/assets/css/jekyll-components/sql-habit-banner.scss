@@ -1,0 +1,82 @@
+@import "../design-system.scss";
+
+.sql-habit-banner {
+  overflow: hidden;
+
+  border-radius: $px8;
+
+  &__container {
+    padding: $px48 $px24;
+    position: relative;
+
+    background-color: #E4E7EB;
+  }
+
+  &__small-review {
+    margin-bottom: $px16;
+  }
+
+  &__headline {
+    margin-top: 0;
+    margin-bottom: $px16;
+  }
+
+  &__subheadline {
+    margin-bottom: $px24;
+    max-width: 600px;
+
+    @include font-large;
+  }
+
+  &__chart-icon {
+    display: none;
+    bottom: -$px8;
+    right: -$px16;
+    width: $px96;
+    height: $px96;
+    position: absolute;
+
+    transform: rotate(-11deg);
+
+    @include breakpoint($md) {
+      display: block;
+      width: 210px;
+      height: 210px;
+      bottom: -$px32;
+      right: -$px24;
+
+      transform: rotate(-11deg);
+    }
+  }
+
+  &__ctas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include breakpoint($md) {
+      flex-direction: row;
+    }
+  }
+
+  &__video-link {
+    display: flex;
+    align-items: center;
+    margin-top: $px8;
+
+    @include font-small;
+    color: $grey-5;
+    text-decoration: none;
+
+    @include breakpoint($md) {
+      margin-top: 0;
+      margin-left: $px12;
+    }
+  }
+
+  &__video-link-icon {
+    width: $px12;
+    height: $px12;
+    margin-left: $px4;
+  }
+}
