@@ -16,6 +16,7 @@ import "./assets/css/jekyll-components/article-page.scss";
 import "./assets/css/jekyll-components/article-info.scss";
 
 import "./assets/css/vendor/twemoji.scss";
+import "./assets/css/vendor/code-highlight.scss";
 
 createApp(App).mount("#blog-vue-app");
 

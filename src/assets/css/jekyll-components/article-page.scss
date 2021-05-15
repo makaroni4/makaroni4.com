@@ -53,5 +53,57 @@
 
   &__content {
     max-width: $px640;
+
+    a {
+      border-bottom: 1px solid #1F2933;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    p,
+    iframe,
+    figure,
+    .highlighter-rouge {
+      margin-top: $px24;
+    }
+
+    h2,
+    h3 {
+      margin: $px32 0 $px16;
+    }
+
+    h3 + p {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    blockquote {
+      margin: 20px 0;
+      padding: 15px 15px;
+
+      border-left: #AAA 10px solid;
+      box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.5);
+
+      font-style: italic;
+
+      cite {
+        display: block;
+        margin-top: 20px;
+      }
+    }
+
+    figcaption {
+      font-family: 'Inconsolata', monospace;
+      font-size: 14px;
+      line-height: 18px;
+      color: #999;
+      text-decoration: none;
+    }
   }
 }
