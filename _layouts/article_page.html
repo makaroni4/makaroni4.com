@@ -28,14 +28,20 @@ layout: default
 
     <div class="article-page__footer">
       {% include article_footer.html %}
+
+      <div class="article-page__comments">
+        <div id="disqus_thread"></div>
+      </div>
     </div>
 
     <div class="article-page__banner">
       {% include sql_habit_banner.html %}
     </div>
 
-    <div class="article-page__comments">
-      <div id="disqus_thread"></div>
+    <div class="article-page__articles-archive">
+      <h2>Explore other articles</h2>
+
+      {% include post_list.html %}
     </div>
   </div>
 </div>
