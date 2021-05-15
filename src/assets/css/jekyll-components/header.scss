@@ -5,11 +5,16 @@
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
   }
 
   &__logo {
-    // color: $white;
+    margin-right: $px12;
+
+    &:after {
+      margin-left: $px8;
+
+      content: "|"
+    }
   }
 
   &__menu {
