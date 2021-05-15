@@ -12,7 +12,7 @@ kramdown:
   input: GFM
   syntax_highlighter_opts:
     default_lang: html
-    css_class: "code-highlight"
+    css_class: "highlight"
     span:
       line_numbers: false
     block:
