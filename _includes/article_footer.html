@@ -1,0 +1,37 @@
+<div class="article-footer">
+  <div class="article-footer__container">
+    <div class="article-footer__author">
+      <img
+        class="article-footer__author-image"
+        src="/images/avatar.png"
+        alt="Anatoli Makarevich, the author of makaroni4.com">
+
+      <div class="article-footer__content">
+        Anatoli Makarevich is an author of <a href="https://www.sqlhabit.com/"><strong>SQL Habit</strong></a> – an online course that teaches how to use data in the modern Internet company by example. Find me <a href="https://twitter.com/makaroni4" target="_blank">on Twitter</a>.
+      </div>
+    </div>
+
+    <div class="article-footer__sharing">
+      <a
+        href="#disqus_thread"
+        class="article-footer__show-comments sans-serif js-show-disqus-comments">
+        <span
+          class="disqus-comment-count"
+          data-disqus-identifier="{{ page.title | slugify }}">
+          View comments
+        </span>
+      </a>
+
+      {% include share_on_twitter.html %}
+    </div>
+  </div>
+</div>
+
+<!-- https://makaroni4.disqus.com/admin/settings/universalcode/ -->
+<script>
+  var disqus_config = function () {
+    this.page.identifier = "{{ page.title | slugify }}";
+    this.page.title = "{{ page.title }}";
+  };
+</script>
+<script id="dsq-count-scr" src="//makaroni4.disqus.com/count.js" async></script>

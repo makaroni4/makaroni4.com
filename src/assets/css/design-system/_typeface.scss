@@ -1,3 +1,24 @@
+@mixin font-btn {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.65px;
+  color: $white;
+}
+
+@mixin font-small {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 600;
+  color: #52606D;
+}
+
+@mixin font-large {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
 h1 {
   font-family: 'Noto Sans HK', sans-serif;
   font-size: 44px;

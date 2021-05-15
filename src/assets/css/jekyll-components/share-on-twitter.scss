@@ -1,0 +1,30 @@
+@import "../design-system.scss";
+
+.share-on-twitter {
+  display: inline-block;
+
+  padding: $px24;
+
+  border-radius: $px48;
+
+  background-color: $blue-6;
+
+  color: $white;
+  @include font-large;
+
+  text-decoration: none;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    width: $px32;
+    height: $px32;
+    margin-right: $px16;
+
+    color: $white;
+  }
+}

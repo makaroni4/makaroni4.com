@@ -1,0 +1,48 @@
+@import "../design-system.scss";
+
+.article-footer {
+  &__author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: $px24;
+
+    border-top: $px1 solid $grey-9;
+  }
+
+  &__author {
+    margin-bottom: $px24;
+  }
+
+  &__author-image {
+    width: $px64;
+    height: $px64;
+    margin-right: $px16;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+  }
+
+  &__sharing {
+    display: flex;
+    flex-direction: column;
+    padding-top: $px32;
+    margin-bottom: $px16;
+
+    border-top: $px1 solid $grey-9;
+
+    @include breakpoint($md) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__show-comments {
+    margin-bottom: $px24;
+
+    @include breakpoint($md) {
+      margin-bottom: 0;
+    }
+  }
+}

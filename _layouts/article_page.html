@@ -26,45 +26,13 @@ layout: default
       {{ content }}
     </div>
 
-    <div class="article-page__credits">
-      {% include credits.html %}
+    <div class="article-page__footer">
+      {% include article_footer.html %}
     </div>
-
-    {% if page.related_posts %}
-      <div class="article-page__recommended-posts recommended-posts">
-        <div class="recommended-posts__header">
-          POSTS YOU MIGHT LIKE
-        </div>
-
-        <div class="recommended-posts__posts">
-          {% for related_post_url in page.related_posts %}
-            {% for _post in site.posts %}
-              {% if _post.url == related_post_url %}
-                <a href={{ _post.url }} class="recommended-posts__post recommended-post">
-                  <div class="recommended-article-page__created-at">
-                    {{ _post.date | date_to_string }}
-                  </div>
-
-                  <div class="recommended-article-page__title">
-                    {{ _post.title }}
-                  </div>
-
-                  <div class="recommended-article-page__excerpt">
-                    {{ _post.excerpt | strip_html }}
-                  </div>
-                </a>
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        </div>
-      </div>
-    {% endif %}
 
     <div class="article-page__comments">
       <div id="disqus_thread"></div>
     </div>
-
-    {% include disqus.html %}
   </div>
 </div>
 

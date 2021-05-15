@@ -1,0 +1,239 @@
+@import "../design-system.scss";
+
+.btn {
+  $root: &;
+
+  display: inline-block;
+  padding: 15px $px12;
+
+  border-radius: $px4;
+  outline: none;
+  border: $px1 solid transparent;
+
+  background-color: $blue-5;
+
+  @include font-btn;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $blue-6;
+    opacity: 1;
+  }
+
+  &--xs {
+    padding: $px4 $px8;
+
+    border-radius: $px4;
+
+    @include font-small;
+    line-height: 1;
+  }
+
+  &--sm {
+    padding: $px8;
+
+    border-radius: $px4;
+  }
+
+  &--lg {
+    padding: $px16;
+
+    border-radius: $px4;
+
+    font-size: $px16;
+  }
+
+  &--fat {
+    padding: $px24 $px24;
+
+    font-size: $px16;
+  }
+
+  &--wide {
+    padding-left: $px48;
+    padding-right: $px48;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--flex {
+    display: flex;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--strong {
+    font-weight: 700;
+  }
+
+  &--light {
+    background-color: $blue-9;
+  }
+
+  &--grey {
+    background-color: $grey-8;
+
+    color: $grey-5;
+
+    &:hover {
+      background-color: $grey-9;
+    }
+  }
+
+  &--green {
+    background-color: $green-5;
+
+    color: $white;
+
+    &:hover {
+      background-color: $green-6;
+    }
+  }
+
+  &--green-7 {
+    background-color: $green-7;
+
+    color: $white;
+
+    &:hover {
+      background-color: $green-8;
+    }
+  }
+
+  &--black {
+    background-color: $grey-1;
+
+    color: $white;
+
+    &:hover {
+      background-color: $grey-2;
+    }
+  }
+
+  &--red {
+    background-color: $red-5;
+
+    color: $white;
+
+    &:hover {
+      background-color: $red-6;
+
+      color: $white;
+    }
+  }
+
+  &--orange {
+    background-color: $orange-7;
+
+    color: $white;
+
+    &:hover {
+      background-color: $orange-6;
+    }
+  }
+
+  &--secondary {
+    border: $px1 solid $grey-1;
+    border-radius: $px4;
+
+    background-color: $white;
+
+    color: $grey-1;
+
+    &:hover {
+      border: $px1 solid $grey-1;
+      border-radius: $px4;
+
+      background-color: $white;
+
+      color: $grey-1;
+
+      opacity: 0.7;
+    }
+  }
+
+  &--selectable {
+    border: $px1 solid $grey-8;
+    border-radius: $px4;
+
+    background-color: $white;
+
+    color: $grey-1;
+
+    &:hover {
+      border-color: $grey-6;
+
+      background-color: $white;
+
+      color: $grey-1;
+
+      opacity: 0.7;
+    }
+
+    &:active {
+      transform: translateY($px1);
+
+      filter: saturate(150%);
+    }
+  }
+
+  &--selected {
+    border-color: $grey-4;
+
+    background-color: $grey-4;
+
+    color: $white;
+
+    &:hover {
+      border-color: $grey-4;
+
+      background-color: $grey-4;
+
+      color: $white;
+    }
+  }
+
+  &--disabled {
+    border-color: $grey-7;
+
+    background-color: $grey-7;
+
+    &:hover {
+      border-color: $grey-7;
+
+      background-color: $grey-7;
+    }
+  }
+
+  &--full-width-xs {
+    width: 100%;
+
+    @include breakpoint($sm) {
+      width: auto;
+    }
+  }
+
+  &--with-icon {
+    display: flex;
+    align-items: center;
+
+    #{$root}__icon {
+      width: $px16;
+      height: $px16;
+      margin-right: $px8;
+    }
+  }
+
+  &:disabled {
+    background-color: $grey-7;
+  }
+}
