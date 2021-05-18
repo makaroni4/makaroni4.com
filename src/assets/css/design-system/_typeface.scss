@@ -43,6 +43,14 @@ h3 {
   color: $grey-3;
 }
 
+h4 {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  color: $grey-3;
+}
+
 .font-large {
   font-size: 24px;
   line-height: 36px;
@@ -66,19 +74,19 @@ a {
 }
 
 .font-small {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1;
   font-weight: 600;
 
   a {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1;
     font-weight: 600;
   }
 }
 
 a.font-small {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1;
   font-weight: 600;
 }

@@ -1,14 +1,14 @@
-@import "../design-system.scss";
-
 .footer {
-  padding: $px48 0 0;
+  padding: $px24 0 $px16;
+
+  background-color: $grey-9;
 
   &__hr {
     margin: 0;
-    padding: 0;
+    padding: $px8 0;
 
     border: 0;
-    border-top: $px1 solid $grey-9;
+    border-top: $px1 solid $grey-8;
   }
 
   &__body {
@@ -16,5 +16,29 @@
     align-items: center;
     justify-content: space-between;
     padding: $px24 0;
+  }
+
+  &__sitemap {
+    display: grid;
+    margin-bottom: $px48;
+
+    grid-template-columns: 1fr;
+    grid-gap: $px32;
+
+    @include breakpoint($sm) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: $px24 $px24;
+    }
+  }
+
+  &__sitemap-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sitemap-link {
+    &:not(:last-child) {
+      margin-bottom: $px24;
+    }
   }
 }
