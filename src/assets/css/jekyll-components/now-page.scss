@@ -2,7 +2,7 @@
 
 .now-page {
   &__headline {
-    margin: 0 0 $px8;
+    margin: $px24 0 $px8;
   }
 
   &__updated-at {
@@ -13,5 +13,9 @@
     &:not(:last-child) {
       margin-bottom: $px48;
     }
+  }
+
+  &__entries {
+    margin-bottom: $px32;
   }
 }

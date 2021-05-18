@@ -68,6 +68,12 @@ a {
   font-size: 12px;
   line-height: 1;
   font-weight: 600;
+
+  a {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+  }
 }
 
 a.font-small {
@@ -78,10 +84,18 @@ a.font-small {
 
 .fw500 {
   font-weight: 500;
+
+  a {
+    font-weight: 500;
+  }
 }
 
 .fw400 {
   font-weight: 400;
+
+  a {
+    font-weight: 400;
+  }
 }
 
 i {
