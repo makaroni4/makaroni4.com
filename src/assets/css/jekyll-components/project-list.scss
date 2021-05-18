@@ -3,5 +3,5 @@
 .project-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: $px24;
+  grid-gap: $px48 $px24;
 }

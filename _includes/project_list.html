@@ -11,25 +11,25 @@
           alt="{{ project.name }}">
       </a>
 
-      <div class="project__name">
+      <h4 class="project__name sans-serif grey3">
         {{ project.name }}
-      </div>
+      </h4>
 
-      <div class="project__description">
+      <div class="project__description sans-serif">
         {{ project.description }}
       </div>
 
       <div class="project__menu">
         {% if project.website_url %}
-          <a class="project__menu-link" href="{{ project.website_url }}">Website</a>
+          <a class="project__menu-link font-small fw400 sans-serif" href="{{ project.website_url }}">Website</a>
         {% endif %}
 
         {% if project.github_url %}
-          <a class="project__menu-link" href="{{ project.github_url }}">Github</a>
+          <a class="project__menu-link font-small fw400 sans-serif" href="{{ project.github_url }}">Github</a>
         {% endif %}
 
         {% if project.blog_post_url %}
-          <a class="project__menu-link" href="{{ project.blog_post_url }}">Blog post</a>
+          <a class="project__menu-link font-small fw400 sans-serif" href="{{ project.blog_post_url }}">Blog post</a>
         {% endif %}
       </div>
     </div>

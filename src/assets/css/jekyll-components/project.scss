@@ -1,11 +1,48 @@
 @import "../design-system.scss";
 
 .project {
+  &__name {
+    margin: 0 0 $px4;
+  }
+
   &__thumbnail {
+    display: block;
+    margin-bottom: $px4;
+
     img {
       width: 100%;
 
       border-radius: $px8;
+
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  &__description {
+    margin-bottom: $px8;
+  }
+
+  &__menu-link {
+    padding: $px4 $px8;
+
+    border-radius: $px4;
+
+    background-color: $purple-6;
+
+    color: $white;
+
+    &:not(:last-child) {
+      margin-right: $px4;
+    }
+
+    &:hover {
+      background-color: $purple-5;
+
+      color: $white;
     }
   }
 }

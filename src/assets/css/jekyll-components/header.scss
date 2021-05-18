@@ -8,11 +8,10 @@
   }
 
   &__logo {
-    margin-right: $px8;
   }
 
   &__logo-separator {
-    margin-right: $px8;
+    margin: 0 $px16;
   }
 
   &__menu {
@@ -26,8 +25,8 @@
   &__menu-item {
     position: relative;
 
-    &:not(:last-child) {
-      margin-right: $px16;
+    &:not(:first-child) {
+      margin-left: $px16;
     }
 
     &--active {

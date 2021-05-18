@@ -4,8 +4,6 @@
       <div class="header__logo font-small">
         {% if page.url == '/' %}
           <span class="header__menu-item header__menu-item--active">makaroni4.com</span>
-
-          <span class="header__logo-separator">|</span>
         {% else %}
           <a
             class="font-small"
@@ -13,6 +11,8 @@
             makaroni4.com
           </a>
         {% endif %}
+
+        <span class="header__logo-separator">|</span>
       </div>
       <ul class="header__menu font-small">
         {% if page.url == '/articles' %}
