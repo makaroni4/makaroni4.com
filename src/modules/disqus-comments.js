@@ -11,6 +11,7 @@
   $viewCommentsLink.addEventListener("click", e => {
     e.preventDefault();
 
+    $viewCommentsLink.classList.add("article-footer__show-comments--hidden");
     $commentsSection.classList.add("article-page__comments--active");
 
     (function() { // DON'T EDIT BELOW THIS LINE

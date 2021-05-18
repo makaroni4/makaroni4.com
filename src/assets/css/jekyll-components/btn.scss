@@ -10,7 +10,7 @@
   outline: none;
   border: $px1 solid transparent;
 
-  background-color: $blue-5;
+  background-color: $cyan-6;
 
   @include font-btn;
   text-decoration: none;
@@ -21,7 +21,7 @@
   transition: all 0.3s;
 
   &:hover {
-    background-color: $blue-6;
+    background-color: $cyan-6;
     opacity: 1;
   }
 
@@ -76,7 +76,7 @@
   }
 
   &--light {
-    background-color: $blue-9;
+    background-color: $cyan-9;
   }
 
   &--grey {

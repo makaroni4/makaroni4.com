@@ -41,6 +41,10 @@
   &__show-comments {
     margin-bottom: $px24;
 
+    &--hidden {
+      visibility: hidden;
+    }
+
     @include breakpoint($md) {
       margin-bottom: 0;
     }

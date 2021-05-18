@@ -8,13 +8,11 @@
   }
 
   &__logo {
-    margin-right: $px12;
+    margin-right: $px8;
+  }
 
-    &:after {
-      margin-left: $px8;
-
-      content: "|"
-    }
+  &__logo-separator {
+    margin-right: $px8;
   }
 
   &__menu {
