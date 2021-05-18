@@ -21,15 +21,21 @@
 
       <div class="project__menu">
         {% if project.website_url %}
-          <a class="project__menu-link font-small fw400 sans-serif" href="{{ project.website_url }}">Website</a>
+          <a
+            class="project__menu-link font-small fw400 sans-serif no-underline"
+            href="{{ project.website_url }}">Website</a>
         {% endif %}
 
         {% if project.github_url %}
-          <a class="project__menu-link font-small fw400 sans-serif" href="{{ project.github_url }}">Github</a>
+          <a
+            class="project__menu-link font-small fw400 sans-serif no-underline"
+            href="{{ project.github_url }}">Github</a>
         {% endif %}
 
         {% if project.blog_post_url %}
-          <a class="project__menu-link font-small fw400 sans-serif" href="{{ project.blog_post_url }}">Blog post</a>
+          <a
+            class="project__menu-link font-small fw400 sans-serif no-underline"
+            href="{{ project.blog_post_url }}">Blog post</a>
         {% endif %}
       </div>
     </div>

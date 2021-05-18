@@ -23,6 +23,7 @@ import "./assets/css/jekyll-components/sql-habit-banner.scss";
 import "./assets/css/jekyll-components/small-review.scss";
 import "./assets/css/jekyll-components/articles-page.scss";
 import "./assets/css/jekyll-components/index-page.scss";
+import "./assets/css/jekyll-components/now-page.scss";
 
 import "./assets/css/vendor/twemoji.scss";
 import "./assets/css/vendor/code-highlight.scss";

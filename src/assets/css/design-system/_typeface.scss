@@ -53,11 +53,15 @@ a {
   line-height: 1.5;
   font-weight: 400;
   color: $grey-1;
-  text-decoration: none;
+  text-decoration: underline;
 
   &:hover {
     color: $grey-3;
   }
+}
+
+.no-underline {
+  text-decoration: none;
 }
 
 .font-small {

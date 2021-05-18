@@ -1,0 +1,17 @@
+@import "../design-system.scss";
+
+.now-page {
+  &__headline {
+    margin: 0 0 $px8;
+  }
+
+  &__updated-at {
+    margin-bottom: $px48;
+  }
+
+  &__entry {
+    &:not(:last-child) {
+      margin-bottom: $px48;
+    }
+  }
+}
