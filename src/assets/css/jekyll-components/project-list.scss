@@ -2,6 +2,12 @@
 
 .project-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: $px48 $px24;
+
+  grid-template-columns: 1fr;
+  grid-gap: $px32;
+
+  @include breakpoint($sm) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $px48 $px24;
+  }
 }
