@@ -12,6 +12,9 @@
   }
 
   &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: $px24 0;
   }
 }
