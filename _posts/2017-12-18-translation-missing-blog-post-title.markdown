@@ -33,7 +33,7 @@ You can find thousands of examples [here](https://publicwww.com/websites/transla
 
 ## What can possibly go wrong?
 
-The worst case – you're sending multi-language emails using your app, so your copy lives in locale files. No matter which translation is missing in this part – it will be sent to every user of your app. :boom:
+The worst case – you're sending multi-language emails using your app, so your copy lives in locale files. No matter which translation is missing in this part – it will be sent to every user of your app. 💥
 
 ## Next actions
 
@@ -43,4 +43,4 @@ If you're using Rails just go to your `env/test.rb` and `env/development.rb` and
 config.action_view.raise_on_missing_translations = true
 ~~~
 
-Merry Christmas! :santa: :christmas_tree: :gift:
+Merry Christmas! 🎅 🎄 🎁

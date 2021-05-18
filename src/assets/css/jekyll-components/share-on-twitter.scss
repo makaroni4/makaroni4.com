@@ -3,14 +3,15 @@
 .share-on-twitter {
   display: inline-block;
 
-  padding: $px24;
+  padding: $px24 $px24;
 
   border-radius: $px48;
 
-  background-color: $purple-6;
+  background-color: $twitter-blue;
 
   color: $white;
-  @include font-large;
+  font-weight: 600;
+  letter-spacing: 0.65px;
 
   text-decoration: none;
 
@@ -24,6 +25,12 @@
     width: $px32;
     height: $px32;
     margin-right: $px16;
+
+    color: $white;
+  }
+
+  &:hover {
+    background-color: $twitter-blue-hover;
 
     color: $white;
   }

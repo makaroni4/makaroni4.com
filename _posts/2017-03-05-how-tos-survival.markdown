@@ -62,6 +62,6 @@ For the final plot we will calculate a portion of "survived" users for every les
 
 <img src="/images/posts/youtube_survival/survival_curves.png" alt="Youtube Pageviews Survival Curves">
 
-As you can see it's really hard to survive singing and drawing classes online :smile: On top, we have chess and React JS – both are easy but bring you a lot of fun :beers:
+As you can see it's really hard to survive singing and drawing classes online 😃 On top, we have chess and React JS – both are easy but bring you a lot of fun! 🍻
 
 P.S. All code for this post is [available on Github](https://github.com/makaroni4/youtube_survival).

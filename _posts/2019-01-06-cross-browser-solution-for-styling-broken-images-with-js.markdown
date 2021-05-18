@@ -59,7 +59,7 @@ This is a live example of this approach:
 <p data-height="300" data-theme-id="0" data-slug-hash="maxQem" data-default-tab="result" data-user="makaroni4" data-pen-title="Broken image styling with :before pseudo element" class="codepen">See the Pen <a href="https://codepen.io/makaroni4/pen/maxQem/">Broken image styling with :before pseudo element</a> by Anatoli (<a href="https://codepen.io/makaroni4">@makaroni4</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-It's very elegant, CSS-only. It has a major drawback though – it doesn't work in Safari (neither on desktop nor on mobile) :warning: For example, this blog has about 30% of visits from Safari. It is simply unacceptable.
+It's very elegant, CSS-only. It has a major drawback though – it doesn't work in Safari (neither on desktop nor on mobile) ⚠️ For example, this blog has about 30% of visits from Safari. It is simply unacceptable.
 
 ## JS solution
 
@@ -103,6 +103,6 @@ Note, that we still use some CSS to style a fallback `<div>` block (we gave it a
 }
 ```
 
-Let's sum up. We have ~20 LOC no-external-dependencies solution to keep your website free from broken images. Not so bad, right? :beers:
+Let's sum up. We have ~20 LOC no-external-dependencies solution to keep your website free from broken images. Not so bad, right? 🍻
 
 P.S. If you know a better way to handle broken images – let everyone know in comments.

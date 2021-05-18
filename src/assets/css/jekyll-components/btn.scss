@@ -89,6 +89,18 @@
     }
   }
 
+  &--blue {
+    background-color: $sql-habit-blue;
+
+    color: $white;
+
+    &:hover {
+      background-color: $sql-habit-blue-hover;
+
+      color: $white;
+    }
+  }
+
   &--green {
     background-color: $green-5;
 

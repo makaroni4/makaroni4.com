@@ -30,4 +30,6 @@ import "./assets/css/vendor/code-highlight.scss";
 
 createApp(App).mount("#blog-vue-app");
 
-twemoji.parse(document.body);
+twemoji.parse(document.body, {
+  ext: ".svg"
+});

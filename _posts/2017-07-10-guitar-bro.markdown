@@ -59,7 +59,7 @@ From the notes frequencies table we see that A-note on E-string should be around
 
 <figure>
   <img src="/images/posts/guitar_bro/notes_fft_d3.jpg" />
-  <figcaption>Same A-note on the E-string but with power applied. Check out <a href="https://makaroni4.github.io/web_audio_fft_meets_d3/3_guitar_notes.html" target="_blank">live browser demo!</a> My guitar is probably out of tune a bit, since the spike is slightly off center :smile:</figcaption>
+  <figcaption>Same A-note on the E-string but with power applied. Check out <a href="https://makaroni4.github.io/web_audio_fft_meets_d3/3_guitar_notes.html" target="_blank">live browser demo!</a> My guitar is probably out of tune a bit, since the spike is slightly off center 😃</figcaption>
 </figure>
 
 It's clear that the input was the A-note (grey lines – are notes of the first string). Easy approach to detect clear note is to calculate the area of the FFT curve around each note and compare these values. If some value is 95% higher then all the rest – it's a clear note.

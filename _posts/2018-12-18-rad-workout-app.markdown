@@ -42,4 +42,4 @@ The config is a JSON file with 3 keys to descrube security rules: `.read`, `.wri
 
 With such validations we can easily make a "backend" for many applications: voting, polls and quizzes, NPS scores and so on. As for our workout app: check out the final implementation with Vue.js at [https://makaroni4.github.io/rad-workout-app/#/](https://makaroni4.github.io/rad-workout-app/#/). One detail you might like – the value of the animated and counted up from 0 to the value.
 
-I hope it was a useful read for you, just in case you were looking for the full source of the Vue app – here's a [Github repo](https://github.com/makaroni4/rad-workout-app). Cheers! :beers:
+I hope it was a useful read for you, just in case you were looking for the full source of the Vue app – here's a [Github repo](https://github.com/makaroni4/rad-workout-app). Cheers! 🍻

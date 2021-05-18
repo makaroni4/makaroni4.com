@@ -9,7 +9,7 @@
     padding: $px48 $px24;
     position: relative;
 
-    background-color: #E4E7EB;
+    background-color: $grey-9;
   }
 
   &__small-review {
@@ -23,9 +23,12 @@
 
   &__subheadline {
     margin-bottom: $px24;
-    max-width: 600px;
+    max-width: 500px;
 
-    @include font-large;
+    font-size: 20px;
+    line-height: $px32;
+    font-weight: 400;
+    color: $grey-4;
   }
 
   &__chart-icon {

@@ -4,12 +4,13 @@
   position: relative;
 
   font-size: 15px;
+  line-height: 18px;
   font-style: italic;
   color: $grey-5;
 
   &:before {
     position: absolute;
-    top: -$px16;
+    top: -18px;
     left: 0;
     width: 85px;
     height: $px16;
