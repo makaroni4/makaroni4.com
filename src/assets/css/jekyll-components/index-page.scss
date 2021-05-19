@@ -1,5 +1,17 @@
 .index-page {
+  &__hero {
+    margin-bottom: $px48;
+  }
+
+  &__about {
+    margin-bottom: $px32;
+  }
+
   &__post-list {
+    margin-bottom: $px48;
+  }
+
+  &__sql-habit-banner {
     margin-bottom: $px48;
   }
 }
