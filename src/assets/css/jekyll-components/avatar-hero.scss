@@ -11,7 +11,7 @@
   }
 
   &__wrapper {
-    padding: $px32;
+    padding: $px72 $px32 $px32;
 
     border-radius: $px8;
 
@@ -39,10 +39,26 @@
   }
 
   &__avatar {
-    display: block;
     position: absolute;
     bottom: 0;
     right: $px32;
     width: $px240;
+  }
+
+  &__rounded-avatar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: $px144;
+
+    border: $px8 solid $purple-4;
+    border-radius: 50%;
+  }
+
+  @include breakpoint($sm) {
+    &__wrapper {
+      padding: $px32;
+    }
   }
 }
