@@ -3,6 +3,8 @@ layout: article_page
 title:  "img-lint: find heavy images in your project"
 description: "How I built img-lint – a Ruby library that tracks heavy images in your project."
 date: 2018-06-22
+start_emoji: 🖼
+finish_emoji: 💣
 published: true
 ---
 

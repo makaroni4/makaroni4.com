@@ -4,6 +4,8 @@ title: "Making a serverless incremental counter for a static webpage via Firebas
 description: "Let's explore the way of shipping a static page with some dynamic content that is synced between all users via Firebase."
 date: 2018-12-18
 published: true
+start_emoji: 💪
+finish_emoji: ⏱
 related_posts: ["/2017/07/10/guitar-bro/", "/2018/06/22/img-lint/"]
 ---
 
@@ -36,7 +38,19 @@ We want to increment the counter every time someone clicks on it.
 
 See how simple it is? We just loaded Firebase from Google CDN, initialized our DB and we're ready to read and write from the database. Wait a second, read and write from the database? What about security? Out of the box there's a read & write permission for every user to your Realtime Database. Scary, right? Let's see how we can configure the access:
 
-<script src="https://gist.github.com/makaroni4/11977820558ea9e93d6bc99f944d4b88.js"></script>
+```json
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "incremental_counter": {
+      ".validate": "newData.isNumber() && newData.val() === data.val() + 1",
+      ".read": true,
+      ".write": true
+    }
+  }
+}
+```
 
 The config is a JSON file with 3 keys to descrube security rules: `.read`, `.write` and `.validate`. We'll enable access only to the key where we store our counter (`incremental_counter`). To allow only increments of one we can write plain JS and use some predefined variables (`newData` – the value we're about to write, `data` – old value [etc](https://firebase.google.com/docs/database/security/securing-data)).
 

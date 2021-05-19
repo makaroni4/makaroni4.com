@@ -4,6 +4,8 @@ title:  "How-tos survival"
 description: "Let's parse some Youtube data of people watching online courses and apply some survival analysis."
 date: 2017-03-05
 categories: ruby parsing gnuplot
+start_emoji: 📉
+finish_emoji: 🧐
 published: true
 ---
 

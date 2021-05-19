@@ -59,6 +59,11 @@
       }
     }
 
+    figure {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     p,
     iframe,
     figure,
@@ -89,6 +94,7 @@
       padding: 15px 15px;
 
       border-left: $grey-4 10px solid;
+      border-radius: 0 $px8 $px8 0;
       box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.5);
 
       font-style: italic;
@@ -105,6 +111,10 @@
       line-height: 18px;
       color: $grey-4;
       text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
     }
   }
 
