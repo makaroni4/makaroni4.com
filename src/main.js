@@ -1,14 +1,13 @@
-import { createApp } from "vue";
-import twemoji from "twemoji";
-import App from "./App.vue";
+import twemoji from 'twemoji';
 
-import "./modules/tweet";
-import "./modules/disqus-comments";
+import './controllers/mobile-header';
 
-import "./assets/css/app.scss";
+import './modules/tweet';
+import './modules/disqus-comments';
 
-createApp(App).mount("#blog-vue-app");
+import './assets/css/app.scss';
 
 twemoji.parse(document.body, {
-  ext: ".svg"
+  folder: 'svg',
+  ext: '.svg',
 });

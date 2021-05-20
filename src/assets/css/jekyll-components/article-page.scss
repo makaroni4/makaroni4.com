@@ -6,7 +6,7 @@
     justify-content: center;
 
     margin-bottom: $px32;
-    padding: $px96 $px96;
+    padding: $px48;
 
     border-radius: $px8;
 
@@ -14,6 +14,10 @@
 
     color: $white;
     text-align: center;
+
+    @include breakpoint($md) {
+      padding: $px96;
+    }
   }
 
   &__headline {
