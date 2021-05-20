@@ -16,18 +16,21 @@ const myCallback = function () {
   fs.createReadStream(`./dist/css/${cssFile}`).pipe(fs.createWriteStream(`./css/${cssFile}`));
   fs.createReadStream(`./dist/js/${jsFile}`).pipe(fs.createWriteStream(`./js/${jsFile}`));
 
-  const layoutFile = './_layouts/default.html';
+  const headFile = './_includes/head.html';
+  const head = fs.readFileSync(headFile, 'utf8');
+  headLines = head.split('\n');
 
-  const layout = fs.readFileSync(layoutFile, 'utf8');
-  layoutLines = layout.split('\n');
+  const prodCssLineIndex = headLines.findIndex((line) => line.indexOf('<!-- PRODCSS -->') > -1) + 1;
+  headLines[prodCssLineIndex] = `      <link rel="stylesheet" href="/css/${cssFile}">`;
+  fs.writeFileSync(headFile, headLines.join('\n'));
 
-  const prodCssLineIndex = layoutLines.findIndex((line) => line.indexOf('<!-- PRODCSS -->') > -1) + 1;
-  layoutLines[prodCssLineIndex] = `      <link rel="stylesheet" href="/css/${cssFile}">`;
+  const bodyEndFile = './_includes/body_end.html';
+  const bodyEnd = fs.readFileSync(bodyEndFile, 'utf8');
+  bodyEndLines = bodyEnd.split('\n');
 
-  const prodJsLineIndex = layoutLines.findIndex((line) => line.indexOf('<!-- PRODJS -->') > -1) + 1;
-  layoutLines[prodJsLineIndex] = `      <script src="/js/${jsFile}"></script>`;
-
-  fs.writeFileSync(layoutFile, layoutLines.join('\n'));
+  const prodJsLineIndex = bodyEndLines.findIndex((line) => line.indexOf('<!-- PRODJS -->') > -1) + 1;
+  bodyEndLines[prodJsLineIndex] = `      <script src="/js/${jsFile}"></script>`;
+  fs.writeFileSync(bodyEndFile, bodyEndLines.join('\n'));
 };
 
 const plugins = [];
@@ -38,7 +41,8 @@ if (isProd) {
 
 module.exports = {
   configureWebpack: {
-    plugins,
+    devtool: 'source-map',
+    plugins: plugins,
   },
   chainWebpack: (config) => {
     // https://forum.vuejs.org/t/disable-code-splitting-in-vue-cli-3/36295/8
@@ -52,6 +56,8 @@ module.exports = {
     svgRule
       .use('vue-svg-loader')
       .loader('vue-svg-loader');
+
+    config.devtool('source-map');
   },
   css: {
     loaderOptions: {
