@@ -21,7 +21,7 @@ const myCallback = function () {
   headLines = head.split('\n');
 
   const prodCssLineIndex = headLines.findIndex((line) => line.indexOf('<!-- PRODCSS -->') > -1) + 1;
-  headLines[prodCssLineIndex] = `      <link rel="stylesheet" href="/css/${cssFile}">`;
+  headLines[prodCssLineIndex] = `  <link rel="stylesheet" href="/css/${cssFile}">`;
   fs.writeFileSync(headFile, headLines.join('\n'));
 
   const bodyEndFile = './_includes/body_end.html';
@@ -29,7 +29,7 @@ const myCallback = function () {
   bodyEndLines = bodyEnd.split('\n');
 
   const prodJsLineIndex = bodyEndLines.findIndex((line) => line.indexOf('<!-- PRODJS -->') > -1) + 1;
-  bodyEndLines[prodJsLineIndex] = `      <script src="/js/${jsFile}"></script>`;
+  bodyEndLines[prodJsLineIndex] = `  <script src="/js/${jsFile}"></script>`;
   fs.writeFileSync(bodyEndFile, bodyEndLines.join('\n'));
 };
 
