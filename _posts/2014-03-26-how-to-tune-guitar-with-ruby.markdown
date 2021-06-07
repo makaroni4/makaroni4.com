@@ -7,6 +7,7 @@ categories: ruby hacking
 start_emoji: 🎸
 finish_emoji: 📊
 published: true
+permalink: tune-guitar-with-ruby
 ---
 
 From time to time, when nobody sees me, I like to play the guitar and every time I face a challenge – how to tune it properly. And like in any other case Ruby comes to the rescue!

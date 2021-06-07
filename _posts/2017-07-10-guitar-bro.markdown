@@ -6,6 +6,7 @@ date: 2017-07-10
 start_emoji: 🎸
 finish_emoji: 🤓
 published: true
+permalink: guitar-bro
 ---
 
 It's always a pleasure to mix programming with something tactile and even more – with something musical. Check out my little experiment of building a browser game that helps learning notes on guitar.

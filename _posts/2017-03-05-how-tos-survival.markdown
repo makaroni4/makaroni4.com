@@ -7,6 +7,7 @@ categories: ruby parsing gnuplot
 start_emoji: 📉
 finish_emoji: 🧐
 published: true
+permalink: survival-analysis
 ---
 
 Watching ["ReactJS Basics"](https://www.youtube.com/watch?v=JPT3bFIwJYA&list=PL55RiY5tL51oyA8euSROLjMFZbXaV7skS) course the other day I've noticed that the further I go – the smaller number of pageviews for each lesson was. But is that "dropout rate" the same for all courses? Here is my little research.

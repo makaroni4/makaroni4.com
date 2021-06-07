@@ -3,7 +3,7 @@ layout: article_page
 title:  "TED talk: Great Leaders Do What Drug Addicts Do "
 description: "My notes to TED talk by Michael Brody-Waite 'Great Leaders Do What Drug Addicts Do'"
 date: 2021-06-07
-slug: leaders-and-drug-addicts
+permalink: leaders-and-drug-addicts
 start_emoji: 💉
 finish_emoji: 💪
 published: true

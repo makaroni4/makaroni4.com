@@ -6,6 +6,7 @@ date: 2019-01-06
 start_emoji: 🖼
 finish_emoji: 🔨
 published: true
+permalink: broken-images
 ---
 
 You may have seen some web pages with broken images. It diminishes website trustworthiness and it just looks bad. Let's explore some solutions to broken images and have a reliable fallback in all browsers.

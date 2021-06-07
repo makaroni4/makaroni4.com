@@ -7,6 +7,7 @@ categories: ruby binary-search TDD
 start_emoji: 🔍
 finish_emoji: 💎
 published: true
+permalink: binary-search
 ---
 
 If you have sorted array than you can search elements there easily with binary search. [An interesting fact](http://en.wikipedia.org/wiki/Binary_search_algorithm#Implementation_issues) about binary search: only 10% of students are able to implement it correctly.

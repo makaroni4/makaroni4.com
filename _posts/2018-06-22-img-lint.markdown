@@ -6,6 +6,7 @@ date: 2018-06-22
 start_emoji: 🖼
 finish_emoji: 💣
 published: true
+permalink: img-lint
 ---
 
 Serving compressed images should be the 1st step of any website optimization. You can imagine how I was surprised when found 2Mb PNG image on our pricing page. Loaded via background-image. 😬

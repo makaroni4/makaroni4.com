@@ -7,6 +7,7 @@ categories: ruby benchmarking
 start_emoji: ⏱
 finish_emoji: 💎
 published: true
+permalink: benchmarking-ruby
 ---
 
 A great technique to improve your code is using benchmarking – comparison between different solutions leads to faster and better code.

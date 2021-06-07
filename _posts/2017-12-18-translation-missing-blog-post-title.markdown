@@ -6,6 +6,7 @@ date: 2017-12-18
 start_emoji: 🌎
 finish_emoji: 🔨
 published: true
+permalink: translating-missing
 ---
 
 TL;DR Make sure you're raising an error in test and development environments if there is a translation missing. Below there are a couple of thoughts and examples.
