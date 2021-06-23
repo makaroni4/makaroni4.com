@@ -34,6 +34,18 @@
 
         <a
           class="mobile-header__dropdown-link font-large sans-serif no-underline"
+          href="/quotes">
+          QUOTES
+        </a>
+
+        <a
+          class="mobile-header__dropdown-link font-large sans-serif no-underline"
+          href="/notes">
+          NOTES
+        </a>
+
+        <a
+          class="mobile-header__dropdown-link font-large sans-serif no-underline"
           href="/articles">
           NOW
         </a>
