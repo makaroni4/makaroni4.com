@@ -1,0 +1,27 @@
+<div class="quote-list">
+  {% for quote in site.data.quotes %}
+    <div class="quote-list__quote quote">
+      <blockquote class="quote__body">
+        {{ quote.quote }}
+      </blockquote>
+
+      {% if quote.author %}
+        <div class="quote__author font-small grey5">
+          {% if quote.author_url %}
+            <a class="quote__author-link grey5" href="{{ quote.author_url }}">
+              {{ quote.author }}
+            </a>
+          {% else %}
+            {{ quote.author }}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <div class="quote__info font-small grey5">
+        <div class="quote__date">
+          {{ quote.created_at }}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

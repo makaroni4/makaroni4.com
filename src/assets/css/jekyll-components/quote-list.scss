@@ -1,0 +1,7 @@
+.quote-list {
+  &__quote {
+    &:not(:last-child) {
+      margin-bottom: $px24;
+    }
+  }
+}

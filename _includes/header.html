@@ -43,6 +43,20 @@
           </li>
         {% endif %}
 
+        {% if page.url == '/quotes' %}
+          <li class="header__menu-item header__menu-item--active font-small">
+            QUOTES
+          </li>
+        {% else %}
+          <li class="header__menu-item">
+            <a
+              class="font-small no-underline"
+              href="/quotes">
+              QUOTES
+            </a>
+          </li>
+        {% endif %}
+
         {% if page.url == '/notes' %}
           <li class="header__menu-item header__menu-item--active font-small">
             NOTES

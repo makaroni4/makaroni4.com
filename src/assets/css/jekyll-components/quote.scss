@@ -1,0 +1,36 @@
+.quote {
+  position: relative;
+  padding: $px48;
+
+  border-radius: $px8;
+
+  background-color: $purple-10;
+
+  &__body {
+    margin: 0 0 $px8;
+    padding: 0;
+
+    @include font-large;
+  }
+
+  &__author {
+    display: block;
+
+    font-style: italic;
+  }
+
+  &__author-link {
+    font-family: 'Noto Sans HK', sans-serif;
+    font-style: italic;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: $px24;
+    right: $px24;
+
+    font-family: 'Noto Sans HK', sans-serif;
+  }
+}
