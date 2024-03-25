@@ -1,3 +1,10 @@
+- name: SQL MDN Docs
+  created_at: 25.03.2024
+  description: SQL Mastery, Discovery, Nuances (MDN) docs
+  thumbnail: sql_mdn_docs.jpg
+  github_url: https://github.com/sqlhabit/sql-mdn-docs
+  website_url: https://www.sqlhabit.com/mdn
+
 - name: Habit Tracker
   created_at: 31.12.2023
   description: Generate your custom printable Habit Tracker.
