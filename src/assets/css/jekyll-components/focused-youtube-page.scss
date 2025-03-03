@@ -1,0 +1,244 @@
+// Focused Youtube Page Styles
+
+// Variables
+$youtube-red: #ff0000;
+$youtube-dark-red: #c00;
+$yt-black: #282828;
+$text-primary: #333;
+$text-secondary: #666;
+$bg-light: #f8f8f8;
+$white: #fff;
+$transition: all 0.3s ease;
+
+// Hero Section
+.fy-hero {
+  padding: 80px 0;
+  background: linear-gradient(135deg, $youtube-red 0%, $youtube-dark-red 100%);
+  color: $white;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.fy-hero-content {
+  flex: 1;
+  max-width: 600px;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .fy-hero-tagline {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+  }
+
+  .fy-hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 32px;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.fy-hero-image {
+  flex: 1;
+  max-width: 500px;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transform: perspective(800px) rotateY(-5deg);
+    transition: $transition;
+
+    &:hover {
+      transform: perspective(800px) rotateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+
+    img {
+      transform: none;
+    }
+  }
+}
+
+// Browser Buttons
+.fy-browser-buttons {
+  margin-top: 32px;
+}
+
+.fy-download-button {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: $white;
+  color: $text-primary;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: $transition;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: darken($white, 5%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .fy-browser-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+}
+
+// Stats Section
+.fy-stats {
+  padding: 60px 0;
+  background-color: $bg-light;
+}
+
+.fy-stats-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.fy-stat-item {
+  text-align: center;
+  padding: 20px;
+
+  h3 {
+    font-size: 2.5rem;
+    color: $youtube-red;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: $text-secondary;
+  }
+
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+// Features Section
+.fy-features {
+  padding: 80px 0;
+
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: $text-primary;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: $youtube-red;
+      margin: 16px auto 0;
+      border-radius: 2px;
+    }
+  }
+}
+
+.fy-feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+
+    .fy-feature-content {
+      padding-left: 0;
+      padding-right: 60px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column !important;
+    text-align: center;
+    margin-bottom: 60px;
+
+    &:nth-child(even) .fy-feature-content {
+      padding-right: 0;
+    }
+  }
+}
+
+.fy-feature-content {
+  flex: 1;
+  padding-left: 60px;
+
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: $text-primary;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: $text-secondary;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.fy-feature-image {
+  flex: 1;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: $transition;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+// Add this to your main Jekyll CSS import file
+// @import "focused-youtube";
