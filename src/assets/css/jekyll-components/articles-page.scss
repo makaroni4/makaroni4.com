@@ -1,3 +1,5 @@
+@use "../design-system/spacing" as *;
+
 .articles-page {
   &__subheadline {
     margin-bottom: $px48;

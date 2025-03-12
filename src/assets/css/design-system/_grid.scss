@@ -1,4 +1,5 @@
-@import "breakpoint";
+@use "./spacing" as *;
+@use "./breakpoint" as *;
 
 .container {
   width: 100%;

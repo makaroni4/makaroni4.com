@@ -1,3 +1,5 @@
+@use "../design-system/spacing" as *;
+
 .quote-list {
   &__quote {
     &:not(:last-child) {

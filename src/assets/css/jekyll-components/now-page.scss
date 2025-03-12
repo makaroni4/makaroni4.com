@@ -1,3 +1,5 @@
+@use "../design-system/spacing" as *;
+
 .now-page {
   &__headline {
     margin: $px24 0 $px8;

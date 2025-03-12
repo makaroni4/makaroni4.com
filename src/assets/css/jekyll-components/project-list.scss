@@ -1,3 +1,6 @@
+@use "../design-system/spacing" as *;
+@use "../design-system/breakpoint" as *;
+
 .project-list {
   display: grid;
 

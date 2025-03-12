@@ -1,3 +1,6 @@
+@use "./colors" as *;
+@use "./spacing" as *;
+
 @mixin font-btn {
   font-size: 14px;
   line-height: 1;
