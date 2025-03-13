@@ -67,6 +67,10 @@ $transition: all 0.3s ease;
   transition: $transition;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
+  &--xl {
+    padding: 24px 48px;
+  }
+
   &:hover {
     background-color: darken($white, 5%);
     transform: translateY(-2px);
@@ -117,85 +121,39 @@ $transition: all 0.3s ease;
 // Features Section
 .fy-features {
   padding: 80px 0;
-
-  .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    color: $text-primary;
-    position: relative;
-
-    &:after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: $youtube-red;
-      margin: 16px auto 0;
-      border-radius: 2px;
-    }
-  }
-}
-
-.fy-feature-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 100px;
+  gap: 100px;
 
-  &:nth-child(even) {
-    flex-direction: row-reverse;
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
 
-    .fy-feature-content {
-      padding-left: 0;
-      padding-right: 60px;
-    }
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column !important;
-    text-align: center;
-    margin-bottom: 60px;
-
-    &:nth-child(even) .fy-feature-content {
-      padding-right: 0;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
     }
   }
 }
 
-.fy-feature-content {
-  flex: 1;
-  padding-left: 60px;
+.fy-feature {
+  display: flex;
+  gap: 32px;
 
-  h3 {
-    font-size: 1.8rem;
-    margin-bottom: 16px;
-    color: $text-primary;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 300px;
   }
 
-  p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: $text-secondary;
-  }
-
-  @media (max-width: 768px) {
-    padding-left: 0;
-    margin-bottom: 30px;
-  }
-}
-
-.fy-feature-image {
-  flex: 1;
-
-  img {
-    width: 100%;
+  &__image {
+    flex: 1;
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: $transition;
+    max-width: 700px;
 
     &:hover {
       transform: translateY(-5px);
