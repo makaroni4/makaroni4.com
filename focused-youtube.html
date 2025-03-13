@@ -5,32 +5,52 @@ description: A browser extension that provides a clean, distraction-free YouTube
 permalink: focused-youtube
 ---
 
-<section class="fy-hero">
-  <div class="container">
-    <div class="fy-hero-content">
-      <h1>Focused Youtube</h1>
-      <p class="fy-hero-tagline">Enjoy YouTube without distractions</p>
-      <p class="fy-hero-description">A browser extension that removes clutter and helps you stay focused on content that matters.</p>
+<section class="fy-navbar">
+  <img class="fy-navbar__logo" src="/images/focused-youtube/logo_with_name.svg" alt="Focused Youtube Logo">
 
-      <div class="fy-browser-buttons">
-        <button id="chrome-download" class="fy-download-button">
-          <img src="/assets/images/chrome-logo.svg" alt="Chrome" class="fy-browser-icon">
-          <span>Add to Chrome</span>
-        </button>
-        <button id="firefox-download" class="fy-download-button">
-          <img src="/assets/images/firefox-logo.svg" alt="Firefox" class="fy-browser-icon">
-          <span>Add to Firefox</span>
-        </button>
-        <button id="edge-download" class="fy-download-button">
-          <img src="/assets/images/edge-logo.svg" alt="Edge" class="fy-browser-icon">
-          <span>Add to Edge</span>
-        </button>
-      </div>
-    </div>
-    <div class="fy-hero-image">
-      <img src="/assets/images/focused-youtube-preview.png" alt="Focused Youtube Extension Preview">
+  <div class="fy-hero__browser-buttons">
+    <button id="chrome-download" class="fy-download-button">
+      <img src="/images/focused-youtube/chrome_logo.svg" alt="Chrome" class="fy-browser-icon">
+      <span>Add to Chrome</span>
+    </button>
+
+    <button id="firefox-download" class="fy-download-button">
+      <img src="/images/focused-youtube/firefox_logo.svg" alt="Firefox" class="fy-browser-icon">
+      <span>Add to Firefox</span>
+    </button>
+
+    <button id="edge-download" class="fy-download-button">
+      <img src="/images/focused-youtube/edge_logo.svg" alt="Edge" class="fy-browser-icon">
+      <span>Add to Edge</span>
+    </button>
+  </div>
+</section>
+
+<section class="fy-hero">
+  <div class="fy-hero__content">
+    <h1>Focused Youtube — enjoy YouTube without distractions</h1>
+
+    <p class="fy-hero__description">A browser extension that removes clutter and helps you stay focused on content that matters.</p>
+
+    <div class="fy-hero__browser-buttons">
+      <button id="chrome-download" class="fy-download-button">
+        <img src="/images/focused-youtube/chrome_logo.svg" alt="Chrome" class="fy-browser-icon">
+        <span>Add to Chrome</span>
+      </button>
+
+      <button id="firefox-download" class="fy-download-button">
+        <img src="/images/focused-youtube/firefox_logo.svg" alt="Firefox" class="fy-browser-icon">
+        <span>Add to Firefox</span>
+      </button>
+
+      <button id="edge-download" class="fy-download-button">
+        <img src="/images/focused-youtube/edge_logo.svg" alt="Edge" class="fy-browser-icon">
+        <span>Add to Edge</span>
+      </button>
     </div>
   </div>
+
+  <img class="fy-hero__snapshot" src="/images/focused-youtube/snapshot.png" alt="Focused Youtube Extension Preview">
 </section>
 
 <section class="fy-stats">
@@ -62,13 +82,13 @@ permalink: focused-youtube
         <p>Experience a minimalist YouTube homepage without distracting recommendations and endless content.</p>
       </div>
       <div class="fy-feature-image">
-        <img src="/assets/images/fy-homepage.png" alt="Focused Youtube Homepage">
+        <img src="/images/focused-youtube/homepage.png" alt="Focused Youtube Homepage">
       </div>
     </div>
 
     <div class="fy-feature-item">
       <div class="fy-feature-image">
-        <img src="/assets/images/fy-video-page.png" alt="Focused Youtube Video Page">
+        <img src="/images/focused-youtube/video_page.png" alt="Focused Youtube Video Page">
       </div>
       <div class="fy-feature-content">
         <h3>Distraction-Free Video Page</h3>
@@ -82,13 +102,13 @@ permalink: focused-youtube
         <p>Enjoy a comfortable viewing experience with full dark mode support for late-night viewing.</p>
       </div>
       <div class="fy-feature-image">
-        <img src="/assets/images/fy-dark-mode.png" alt="Focused Youtube Dark Mode">
+        <img src="/images/focused-youtube/darkmode.png" alt="Focused Youtube Dark Mode">
       </div>
     </div>
 
     <div class="fy-feature-item">
       <div class="fy-feature-image">
-        <img src="/assets/images/fy-menu-navigation.png" alt="Focused Youtube Menu Navigation">
+        <img src="/images/focused-youtube/nav_menu.png" alt="Focused Youtube Menu Navigation">
       </div>
       <div class="fy-feature-content">
         <h3>Simplified Menu Navigation</h3>
@@ -102,7 +122,7 @@ permalink: focused-youtube
         <p>Configure the extension to suit your preferences with easy-to-use settings.</p>
       </div>
       <div class="fy-feature-image">
-        <img src="/assets/images/fy-config.png" alt="Focused Youtube Configuration">
+        <img src="/images/focused-youtube/video_page.png" alt="Focused Youtube Configuration">
       </div>
     </div>
   </div>
@@ -110,12 +130,10 @@ permalink: focused-youtube
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Default to Chrome button
     document.getElementById('chrome-download').style.display = 'flex';
     document.getElementById('firefox-download').style.display = 'none';
     document.getElementById('edge-download').style.display = 'none';
 
-    // Browser detection
     if (navigator.userAgent.indexOf("Firefox") !== -1) {
       document.getElementById('chrome-download').style.display = 'none';
       document.getElementById('firefox-download').style.display = 'flex';
@@ -128,15 +146,15 @@ permalink: focused-youtube
 
     // Add button links
     document.getElementById('chrome-download').addEventListener('click', function() {
-      window.open('https://chrome.google.com/webstore/detail/focused-youtube/extension-id', '_blank');
+      window.open('https://chromewebstore.google.com/detail/focused-youtube/nfghbmabdoakhobmimnjkamfdnpfammn', '_blank');
     });
 
     document.getElementById('firefox-download').addEventListener('click', function() {
-      window.open('https://addons.mozilla.org/en-US/firefox/addon/focused-youtube/', '_blank');
+      window.open('https://addons.mozilla.org/en-US/firefox/addon/focused-for-youtube/', '_blank');
     });
 
     document.getElementById('edge-download').addEventListener('click', function() {
-      window.open('https://microsoftedge.microsoft.com/addons/detail/focused-youtube/extension-id', '_blank');
+      window.open('https://microsoftedge.microsoft.com/addons/detail/fkipbhecgloafeodihbhahjnhmainlil', '_blank');
     });
   });
 </script>

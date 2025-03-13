@@ -3,9 +3,6 @@
 @use "../design-system/typeface" as *;
 @use "../design-system/breakpoint" as *;
 
-// Focused Youtube Page Styles
-
-// Variables
 $youtube-red: #ff0000;
 $youtube-dark-red: #c00;
 $yt-black: #282828;
@@ -15,83 +12,45 @@ $bg-light: #f8f8f8;
 $white: #fff;
 $transition: all 0.3s ease;
 
-// Hero Section
+.fy-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+
+  &__logo {
+    height: 40px;
+  }
+}
+
 .fy-hero {
   padding: 80px 0;
-  background: linear-gradient(135deg, $youtube-red 0%, $youtube-dark-red 100%);
-  color: $white;
   overflow: hidden;
 
-  .container {
+  &__content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
-  }
-}
-
-.fy-hero-content {
-  flex: 1;
-  max-width: 600px;
-
-  h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 16px;
+    justify-content: center;
   }
 
-  .fy-hero-tagline {
-    font-size: 1.8rem;
-    margin-bottom: 16px;
+  &__headline {
+
   }
 
-  .fy-hero-description {
-    font-size: 1.2rem;
+  &__description {
+
+  }
+
+  &__browser-buttons {
     margin-bottom: 32px;
-    opacity: 0.9;
   }
 
-  @media (max-width: 768px) {
-    text-align: center;
-    margin-bottom: 40px;
-
-    h1 {
-      font-size: 2.5rem;
-    }
+  &__snapshot {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
   }
-}
-
-.fy-hero-image {
-  flex: 1;
-  max-width: 500px;
-
-  img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    transform: perspective(800px) rotateY(-5deg);
-    transition: $transition;
-
-    &:hover {
-      transform: perspective(800px) rotateY(0);
-    }
-  }
-
-  @media (max-width: 768px) {
-    max-width: 100%;
-
-    img {
-      transform: none;
-    }
-  }
-}
-
-// Browser Buttons
-.fy-browser-buttons {
-  margin-top: 32px;
 }
 
 .fy-download-button {
@@ -244,6 +203,3 @@ $transition: all 0.3s ease;
     }
   }
 }
-
-// Add this to your main Jekyll CSS import file
-// @import "focused-youtube";
