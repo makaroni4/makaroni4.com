@@ -12,6 +12,24 @@ $bg-light: #f8f8f8;
 $white: #fff;
 $transition: all 0.3s ease;
 
+// Add the new BEM section classes with margin-bottom
+.fy-lp {
+  &__navbar {
+  }
+
+  &__hero {
+    margin-bottom: 80px;
+  }
+
+  &__stats {
+    margin-bottom: 80px;
+  }
+
+  &__features {
+    margin-bottom: 80px;
+  }
+}
+
 .fy-navbar {
   display: flex;
   justify-content: space-between;
@@ -132,8 +150,10 @@ $transition: all 0.3s ease;
   text-align: center;
 
   &__number {
+    line-height: 1;
+    font-family: 'Noto Sans HK', sans-serif;
     font-size: 60px;
-    color: $youtube-red;
+    color: #323F4B;
     margin-bottom: 8px;
     font-weight: 700;
   }
@@ -185,11 +205,6 @@ $transition: all 0.3s ease;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: $transition;
     max-width: 700px;
-
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    }
   }
 }
 
