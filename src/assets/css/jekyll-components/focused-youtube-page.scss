@@ -35,11 +35,15 @@ $transition: all 0.3s ease;
   }
 
   &__headline {
+    margin-bottom: 16px;
 
+    font-size: 64px;
   }
 
   &__description {
+    margin-bottom: 48px;
 
+    font-size: 24px;
   }
 
   &__browser-buttons {
