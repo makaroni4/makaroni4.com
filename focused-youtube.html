@@ -9,17 +9,17 @@ permalink: focused-youtube
   <img class="fy-navbar__logo" src="/images/focused-youtube/logo_with_name.svg" alt="Focused Youtube Logo">
 
   <div class="fy-hero__browser-buttons">
-    <button id="chrome-download" class="fy-download-button">
+    <button id="nav-chrome-download" class="fy-download-button fy-browser-btn" data-browser="chrome">
       <img src="/images/focused-youtube/chrome_logo.svg" alt="Chrome" class="fy-browser-icon">
       <span>Add to Chrome</span>
     </button>
 
-    <button id="firefox-download" class="fy-download-button">
+    <button id="nav-firefox-download" class="fy-download-button fy-browser-btn" data-browser="firefox">
       <img src="/images/focused-youtube/firefox_logo.svg" alt="Firefox" class="fy-browser-icon">
       <span>Add to Firefox</span>
     </button>
 
-    <button id="edge-download" class="fy-download-button">
+    <button id="nav-edge-download" class="fy-download-button fy-browser-btn" data-browser="edge">
       <img src="/images/focused-youtube/edge_logo.svg" alt="Edge" class="fy-browser-icon">
       <span>Add to Edge</span>
     </button>
@@ -33,17 +33,17 @@ permalink: focused-youtube
     <p class="fy-hero__description">A browser extension that removes clutter and helps you stay focused on content that matters.</p>
 
     <div class="fy-hero__browser-buttons">
-      <button id="chrome-download" class="fy-download-button fy-download-button--xl">
+      <button id="hero-chrome-download" class="fy-download-button fy-download-button--xl fy-browser-btn" data-browser="chrome">
         <img src="/images/focused-youtube/chrome_logo.svg" alt="Chrome" class="fy-browser-icon">
         <span>Add to Chrome</span>
       </button>
 
-      <button id="firefox-download" class="fy-download-button fy-download-button--xl">
+      <button id="hero-firefox-download" class="fy-download-button fy-download-button--xl fy-browser-btn" data-browser="firefox">
         <img src="/images/focused-youtube/firefox_logo.svg" alt="Firefox" class="fy-browser-icon">
         <span>Add to Firefox</span>
       </button>
 
-      <button id="edge-download" class="fy-download-button fy-download-button--xl">
+      <button id="hero-edge-download" class="fy-download-button fy-download-button--xl fy-browser-btn" data-browser="edge">
         <img src="/images/focused-youtube/edge_logo.svg" alt="Edge" class="fy-browser-icon">
         <span>Add to Edge</span>
       </button>
@@ -121,31 +121,48 @@ permalink: focused-youtube
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('chrome-download').style.display = 'flex';
-    document.getElementById('firefox-download').style.display = 'none';
-    document.getElementById('edge-download').style.display = 'none';
+    // Detect browser
+    let browserType = 'chrome'; // Default
 
     if (navigator.userAgent.indexOf("Firefox") !== -1) {
-      document.getElementById('chrome-download').style.display = 'none';
-      document.getElementById('firefox-download').style.display = 'flex';
-      document.getElementById('edge-download').style.display = 'none';
+      browserType = 'firefox';
     } else if (navigator.userAgent.indexOf("Edg") !== -1) {
-      document.getElementById('chrome-download').style.display = 'none';
-      document.getElementById('firefox-download').style.display = 'none';
-      document.getElementById('edge-download').style.display = 'flex';
+      browserType = 'edge';
     }
 
-    // Add button links
-    document.getElementById('chrome-download').addEventListener('click', function() {
-      window.open('https://chromewebstore.google.com/detail/focused-youtube/nfghbmabdoakhobmimnjkamfdnpfammn', '_blank');
+    // Show/hide buttons based on browser type
+    const allButtons = document.querySelectorAll('.fy-browser-btn');
+    allButtons.forEach(button => {
+      if (button.dataset.browser === browserType) {
+        button.style.display = 'flex';
+      } else {
+        button.style.display = 'none';
+      }
     });
 
-    document.getElementById('firefox-download').addEventListener('click', function() {
-      window.open('https://addons.mozilla.org/en-US/firefox/addon/focused-for-youtube/', '_blank');
-    });
+    // Setup browser extension links
+    const chromeLinks = {
+      url: 'https://chromewebstore.google.com/detail/focused-youtube/nfghbmabdoakhobmimnjkamfdnpfammn',
+      buttons: document.querySelectorAll('[data-browser="chrome"]')
+    };
 
-    document.getElementById('edge-download').addEventListener('click', function() {
-      window.open('https://microsoftedge.microsoft.com/addons/detail/fkipbhecgloafeodihbhahjnhmainlil', '_blank');
+    const firefoxLinks = {
+      url: 'https://addons.mozilla.org/en-US/firefox/addon/focused-for-youtube/',
+      buttons: document.querySelectorAll('[data-browser="firefox"]')
+    };
+
+    const edgeLinks = {
+      url: 'https://microsoftedge.microsoft.com/addons/detail/fkipbhecgloafeodihbhahjnhmainlil',
+      buttons: document.querySelectorAll('[data-browser="edge"]')
+    };
+
+    // Add click handlers to all buttons
+    [chromeLinks, firefoxLinks, edgeLinks].forEach(browserConfig => {
+      browserConfig.buttons.forEach(button => {
+        button.addEventListener('click', function() {
+          window.open(browserConfig.url, '_blank');
+        });
+      });
     });
   });
 </script>
