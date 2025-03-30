@@ -63,30 +63,45 @@ $transition: all 0.3s ease;
   display: flex;
   align-items: center;
   padding: 12px 24px;
-  background-color: $white;
-  color: $text-primary;
+
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: $transition;
+  border-radius: 48px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-  &--xl {
-    padding: 24px 48px;
-  }
+  background-color: #0967D2;
+
+  font-size: 16px;
+  line-height: 1;
+  font-family: 'Noto Sans HK', sans-serif;
+  font-weight: 500;
+  color: $white;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: $transition;
 
   &:hover {
-    background-color: darken($white, 5%);
+    background-color: darken(#0967D2, 10%);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   }
 
   .fy-browser-icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     margin-right: 12px;
+  }
+
+  &--xl {
+    padding: 24px 48px;
+
+    font-size: 24px;
+
+    .fy-browser-icon {
+      margin-right: 20px;
+      width: 36px;
+      height: 36px;
+    }
   }
 }
 
