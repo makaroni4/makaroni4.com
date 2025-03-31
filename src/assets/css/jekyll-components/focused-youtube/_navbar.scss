@@ -2,9 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
+  padding: $px16 $px16;
 
   &__logo {
-    height: 30px;
+    height: $px32;
+  }
+
+  &__browser-buttons {
+    display: none;
+  }
+
+  @include breakpoint($sm) {
+    padding: $px16 $px32;
+
+    &__browser-buttons {
+      display: flex;
+    }
   }
 }
