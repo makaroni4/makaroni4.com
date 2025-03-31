@@ -16,6 +16,7 @@
 
   @include breakpoint($sm) {
     gap: $px96;
+    padding-bottom: $px48;
 
     &__item {
       &:nth-child(even) {
