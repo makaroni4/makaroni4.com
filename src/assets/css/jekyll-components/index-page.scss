@@ -1,3 +1,5 @@
+@use "../design-system/spacing" as *;
+
 .index-page {
   &__hero {
     margin-bottom: $px48;

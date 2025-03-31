@@ -73,11 +73,14 @@ export default {
 </script>
 
 <style lang="scss">
+@use "@/assets/css/design-system/colors" as colors;
+@use "@/assets/css/design-system/spacing" as spacing;
+
 .mobile-header {
-  padding: $px24;
+  padding: spacing.$px24;
   position: relative;
 
-  background-color: $purple-5;
+  background-color: colors.$purple-5;
 
   &__container {
   }
@@ -89,13 +92,13 @@ export default {
   }
 
   &__logo {
-    color: $white;
+    color: colors.$white;
   }
 
   &__toggle-icon {
-    height: $px24;
+    height: spacing.$px24;
 
-    color: $white;
+    color: colors.$white;
   }
 
   &__dropdown {
@@ -105,18 +108,18 @@ export default {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: $px32 $px24;
+    padding: spacing.$px32 spacing.$px24;
     z-index: 100;
     transform: translateY(100%);
 
-    background-color: $purple-5;
+    background-color: colors.$purple-5;
   }
 
   &__dropdown-link {
-    color: $white;
+    color: colors.$white;
 
     &:not(:last-child) {
-      margin-bottom: $px24;
+      margin-bottom: spacing.$px24;
     }
   }
 }

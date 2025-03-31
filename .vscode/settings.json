@@ -1,0 +1,10 @@
+{
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/dist.zip": true,
+    "**/_site": true,
+    "**/.sass-cache": true,
+    "**/.jekyll-cache": true
+  }
+}

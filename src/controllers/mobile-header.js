@@ -1,8 +1,5 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import MobileHeader from '../components/MobileHeader.vue';
 
-Vue.config.productionTip = false;
-
-new Vue({
-  render: (h) => h(MobileHeader),
-}).$mount('#js-mobile-header');
+const app = createApp(MobileHeader);
+app.mount('#js-mobile-header');

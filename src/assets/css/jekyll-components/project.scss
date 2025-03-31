@@ -1,3 +1,6 @@
+@use "../design-system/spacing" as *;
+@use "../design-system/colors" as *;
+
 .project {
   &__name {
     margin: 0 0 $px4;

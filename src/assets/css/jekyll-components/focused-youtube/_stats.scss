@@ -1,0 +1,37 @@
+.fy-stats {
+  display: flex;
+  flex-direction: column;
+  gap: $px48;
+  margin: 0 auto;
+  padding: 0 $px16;
+
+  @include breakpoint($sm) {
+    padding: 0 $px32;
+    max-width: 1024px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.fy-stat-item {
+  text-align: center;
+
+  &__number {
+    margin-bottom: $px8;
+
+    line-height: 1;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: $px48;
+    font-weight: 700;
+    color: #323F4B;
+  }
+
+  p {
+    font-size: $px20;
+    white-space: nowrap;
+  }
+
+  @include breakpoint($sm) {
+    flex-basis: 100%;
+  }
+}

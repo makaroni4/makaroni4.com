@@ -1,1 +1,45 @@
-<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>blog</title><link href="/css/app.209c713b.css" rel="preload" as="style"><link href="/js/app.86b43e9a.js" rel="preload" as="script"><link href="/css/app.209c713b.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but blog doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="/js/app.86b43e9a.js"></script></body></html>
+---
+layout: default
+title: "A blog by @makaroni4"
+description: "@makaroni4 (Anatoli Makarevich) is a software engineer at Blinkist focusing on web and data."
+---
+
+<div class="index-page">
+  <div class="index-page__hero">
+    {% include avatar_hero.html %}
+  </div>
+
+  <div class="index-page__about container">
+    <p>
+      My name Anatoli, I was born in Minsk, Belarus; studied Physics & Math in MIPT; currently living in Berlin📍. Wie geht’s? 😄 🍻
+    </p>
+
+    <p>
+      During the day I work as a Lead Engineer at <a href="https://www.blinkist.com/">Blinkist</a>, the #1 book summary app in the world.
+    </p>
+
+    <p>
+      During the night I'm building <a href="https://www.sqlhabit.com/">SQL Habit</a> – a platform for mastering Data Analysis with SQL in a business context. According to my students, it's "The best Data Analysis/SQL course in the world". ❤️
+    </p>
+
+    <p>
+      📈 I consult on Growth and Tech topics: Marketing Integrations and Data Modelling, Website architecture, Marketing/Product analytics, etc. Ping me <a href="mailto:makaroni4@gmail.com">via email</a> or <a href="https://twitter.com/makaroni4">on Twitter</a>.
+    </p>
+  </div>
+
+  <div class="index-page__sql-habit-banner container">
+    {% include sql_habit_banner.html %}
+  </div>
+
+  <div class="index-page__post-list container">
+    <h2>Articles</h2>
+
+    {% include post_list.html %}
+  </div>
+
+  <div class="index-page__project-list container">
+    <h2>Projects</h2>
+
+    {% include project_list.html %}
+  </div>
+</div>

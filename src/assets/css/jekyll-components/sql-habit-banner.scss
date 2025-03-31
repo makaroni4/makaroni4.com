@@ -1,3 +1,8 @@
+@use "../design-system/spacing" as *;
+@use "../design-system/colors" as *;
+@use "../design-system/typeface" as *;
+@use "../design-system/breakpoint" as *;
+
 .sql-habit-banner {
   overflow: hidden;
 

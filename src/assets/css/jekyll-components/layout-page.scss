@@ -1,3 +1,5 @@
+@use "../design-system/spacing" as *;
+
 .layout-page {
   &__header {
     margin-bottom: $px24;

@@ -1,9 +1,12 @@
-@import "./design-system/normalize";
-@import "./design-system/colors";
-@import "./design-system/spacing";
-@import "./design-system/typeface";
-@import "./design-system/breakpoint";
-@import "./design-system/grid";
-@import "./design-system/animations";
-@import "./design-system/defaults";
-@import "./design-system/border-box";
+@forward "./design-system/normalize";
+@forward "./design-system/colors";
+@forward "./design-system/spacing";
+@forward "./design-system/typeface";
+@forward "./design-system/breakpoint";
+@forward "./design-system/grid";
+@forward "./design-system/animations";
+@forward "./design-system/defaults";
+@forward "./design-system/border-box";
+
+@use "./design-system/colors" as colors;
+@use "./design-system/spacing" as spacing;

@@ -1,0 +1,22 @@
+.fy-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $px16 $px16;
+
+  &__logo {
+    height: $px32;
+  }
+
+  &__browser-buttons {
+    display: none;
+  }
+
+  @include breakpoint($sm) {
+    padding: $px16 $px32;
+
+    &__browser-buttons {
+      display: flex;
+    }
+  }
+}

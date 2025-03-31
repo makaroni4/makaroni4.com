@@ -1,0 +1,22 @@
+.fy-lp {
+  &__navbar {
+  }
+
+  &__hero {
+    margin-bottom: $px72;
+  }
+
+  &__stats {
+    margin-bottom: $px96;
+  }
+
+  &__features {
+    margin-bottom: $px72;
+  }
+
+  @include breakpoint($sm) {
+    &__stats {
+      margin-bottom: $px144;
+    }
+  }
+}

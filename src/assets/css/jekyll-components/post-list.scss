@@ -1,3 +1,5 @@
+@use "../design-system/spacing" as *;
+
 .post-list {
   &__year-list {
     &:not(:last-child) {
