@@ -1,0 +1,50 @@
+.fy-hero {
+  padding: 80px 0;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__headline {
+    margin-bottom: 16px;
+    font-size: 64px;
+  }
+
+  &__description {
+    max-width: 1000px;
+    margin-bottom: 48px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__browser-buttons {
+    margin-bottom: 96px;
+    display: flex;
+    gap: 32px;
+  }
+
+  &__browser-buttons-wrapper {
+    position: relative;
+  }
+
+  &__snapshot {
+    display: flex;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  &__version {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    color: $grey-3;
+    transform: translateX(50%) translateY(100%);
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Noto Sans HK', sans-serif;
+  }
+}

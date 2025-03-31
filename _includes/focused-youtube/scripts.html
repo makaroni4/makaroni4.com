@@ -1,0 +1,67 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Detect browser
+    let browserType = 'chrome';
+
+    if (navigator.userAgent.indexOf("Firefox") !== -1) {
+      browserType = 'firefox';
+    } else if (navigator.userAgent.indexOf("Edg") !== -1) {
+      browserType = 'edge';
+    }
+
+    // Show/hide buttons based on browser type
+    const allButtons = document.querySelectorAll('.fy-browser-btn');
+    allButtons.forEach(button => {
+      if (button.dataset.browser === browserType) {
+        button.style.display = 'flex';
+      } else {
+        button.style.display = 'none';
+      }
+    });
+
+    // Setup browser extension links
+    const chromeLinks = {
+      url: 'https://chromewebstore.google.com/detail/focused-youtube/nfghbmabdoakhobmimnjkamfdnpfammn',
+      buttons: document.querySelectorAll('[data-browser="chrome"]')
+    };
+
+    const firefoxLinks = {
+      url: 'https://addons.mozilla.org/en-US/firefox/addon/focused-for-youtube/',
+      buttons: document.querySelectorAll('[data-browser="firefox"]')
+    };
+
+    const edgeLinks = {
+      url: 'https://microsoftedge.microsoft.com/addons/detail/fkipbhecgloafeodihbhahjnhmainlil',
+      buttons: document.querySelectorAll('[data-browser="edge"]')
+    };
+
+    // Add click handlers to all buttons
+    [chromeLinks, firefoxLinks, edgeLinks].forEach(browserConfig => {
+      browserConfig.buttons.forEach(button => {
+        button.addEventListener('click', function() {
+          window.open(browserConfig.url, '_blank');
+        });
+      });
+    });
+
+    // Update release date text
+    const releaseDateSpan = document.querySelector('[data-release-date]');
+    if (releaseDateSpan) {
+      const releaseDate = new Date(releaseDateSpan.dataset.releaseDate);
+      const today = new Date();
+      const diffTime = Math.abs(today - releaseDate);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      let releaseDateText;
+      if (diffDays === 0) {
+        releaseDateText = 'today';
+      } else if (diffDays === 1) {
+        releaseDateText = '1 day ago';
+      } else {
+        releaseDateText = `${diffDays} days ago`;
+      }
+
+      releaseDateSpan.textContent = releaseDateText;
+    }
+  });
+</script>

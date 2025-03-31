@@ -1,0 +1,36 @@
+.fy-footer {
+  padding: 48px 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+  &__content {
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__heart {
+    color: #ff0000;
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

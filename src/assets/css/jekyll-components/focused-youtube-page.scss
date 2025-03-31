@@ -3,6 +3,15 @@
 @use "../design-system/typeface" as *;
 @use "../design-system/breakpoint" as *;
 
+@import "focused-youtube/variables";
+@import "focused-youtube/spacing";
+@import "focused-youtube/navbar";
+@import "focused-youtube/hero";
+@import "focused-youtube/stats";
+@import "focused-youtube/features";
+@import "focused-youtube/footer";
+@import "focused-youtube/download-button";
+
 $youtube-red: #ff0000;
 $youtube-dark-red: #c00;
 $yt-black: #282828;
