@@ -15,7 +15,7 @@
   }
 
   @include breakpoint($sm) {
-    gap: $px96;
+    gap: $px144;
     padding-bottom: $px48;
 
     &__item {

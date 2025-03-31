@@ -1,27 +1,37 @@
-.fy-stats-wrapper {
+.fy-stats {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: $px48;
+  margin: 0 auto;
+  padding: 0 $px16;
+
+  @include breakpoint($sm) {
+    padding: 0 $px32;
+    max-width: 1024px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .fy-stat-item {
   text-align: center;
 
   &__number {
+    margin-bottom: $px8;
+
     line-height: 1;
     font-family: 'Noto Sans HK', sans-serif;
-    font-size: 52px;
-    color: #323F4B;
-    margin-bottom: 8px;
+    font-size: $px48;
     font-weight: 700;
+    color: #323F4B;
   }
 
   p {
-    font-size: 20px;
+    font-size: $px20;
+    white-space: nowrap;
   }
 
-  @media (max-width: 768px) {
+  @include breakpoint($sm) {
     flex-basis: 100%;
-    margin-bottom: 30px;
   }
 }
