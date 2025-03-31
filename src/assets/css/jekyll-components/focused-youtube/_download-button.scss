@@ -3,16 +3,20 @@
   align-items: center;
   justify-content: center;
   padding: 12px 24px;
+
   border: none;
   border-radius: 48px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
   background-color: #0967D2;
+
   font-size: 16px;
   line-height: 1;
   font-family: 'Noto Sans HK', sans-serif;
   font-weight: 500;
   color: $white;
   text-transform: uppercase;
+
   cursor: pointer;
   transition: $transition;
 
@@ -37,6 +41,7 @@
 
   &--xl {
     padding: 24px 48px;
+
     font-size: 24px;
 
     .fy-browser-icon {
