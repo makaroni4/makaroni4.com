@@ -63,5 +63,25 @@
 
       releaseDateSpan.textContent = releaseDateText;
     }
+
+    function loadHeroAnimation() {
+      const snapshotImg = document.querySelector('.fy-hero__snapshot');
+      const gifUrl = '/images/focused-youtube/hero_animation.gif';
+
+      const gifImage = new Image();
+
+      gifImage.onload = function() {
+        snapshotImg.classList.add('fy-hero__snapshot--loading');
+
+        setTimeout(() => {
+          snapshotImg.src = gifUrl;
+          snapshotImg.classList.remove('fy-hero__snapshot--loading');
+        }, 300);
+      };
+
+      gifImage.src = gifUrl;
+    }
+
+    setTimeout(loadHeroAnimation, 1000);
   });
 </script>

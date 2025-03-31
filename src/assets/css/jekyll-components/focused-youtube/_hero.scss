@@ -44,10 +44,23 @@
     display: inline-flex;
   }
 
+  &__snapshot-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   &__snapshot {
     display: flex;
-    width: 100%;
+    max-width: 700px;
     margin: 0 auto;
+    transition: opacity 0.3s ease;
+
+    border-radius: $px8;
+
+    &--loading {
+      opacity: 0.8;
+    }
   }
 
   &__version {
@@ -91,7 +104,7 @@
     }
 
     &__snapshot {
-      max-width: $px720;
+      width: 100%;
     }
   }
 }
