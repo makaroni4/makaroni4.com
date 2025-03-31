@@ -1,5 +1,5 @@
 .fy-hero {
-  padding: $px72 0;
+  padding: $px48 $px16;
   overflow: hidden;
 
   &__content {
@@ -12,29 +12,41 @@
   &__headline {
     margin-bottom: $px16;
 
-    font-size: $px64;
+    font-size: $px48;
+    text-align: center;
+    line-height: 1.2;
   }
 
   &__description {
-    max-width: 1000px;
-    margin-bottom: 48px;
-    font-size: 24px;
+    margin-bottom: $px48;
+
+    font-size: $px24;
     text-align: center;
   }
 
   &__browser-buttons {
-    margin-bottom: 96px;
     display: flex;
-    gap: 32px;
+    align-items: center;
+    flex-direction: column;
+    gap: $px32;
+    margin-bottom: $px96;
   }
 
   &__browser-buttons-wrapper {
     position: relative;
+    margin-bottom: $px24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__source-code-link {
+    display: inline-flex;
   }
 
   &__snapshot {
     display: flex;
-    max-width: 700px;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -47,5 +59,38 @@
     text-align: center;
     font-size: 14px;
     font-family: 'Noto Sans HK', sans-serif;
+  }
+
+  @include breakpoint($sm) {
+    padding: $px72 $px32;
+
+    &__content {
+      flex-direction: column;
+    }
+
+    &__headline {
+      margin-bottom: $px16;
+
+      font-size: $px64;
+    }
+
+    &__description {
+      max-width: $px960;
+      margin-bottom: $px48;
+
+      font-size: $px24;
+    }
+
+    &__browser-buttons {
+      flex-direction: row;
+    }
+
+    &__browser-buttons-wrapper {
+      margin-bottom: 0;
+    }
+
+    &__snapshot {
+      max-width: $px720;
+    }
   }
 }
