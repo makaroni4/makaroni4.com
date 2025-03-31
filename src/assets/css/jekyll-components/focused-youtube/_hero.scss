@@ -29,7 +29,7 @@
     align-items: center;
     flex-direction: column;
     gap: $px32;
-    margin-bottom: $px96;
+    margin-bottom: $px72;
   }
 
   &__browser-buttons-wrapper {
@@ -83,6 +83,7 @@
 
     &__browser-buttons {
       flex-direction: row;
+      margin-bottom: $px96;
     }
 
     &__browser-buttons-wrapper {
