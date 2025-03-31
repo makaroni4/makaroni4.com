@@ -3,14 +3,20 @@
   }
 
   &__hero {
-    margin-bottom: 80px;
+    margin-bottom: $px72;
   }
 
   &__stats {
-    margin-bottom: 80px;
+    margin-bottom: $px96;
   }
 
   &__features {
-    margin-bottom: 80px;
+    margin-bottom: $px72;
+  }
+
+  @include breakpoint($sm) {
+    &__stats {
+      margin-bottom: $px144;
+    }
   }
 }
