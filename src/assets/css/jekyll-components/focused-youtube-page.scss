@@ -11,7 +11,7 @@
 @import "focused-youtube/features";
 @import "focused-youtube/footer";
 @import "focused-youtube/download-button";
-
+@import "focused-youtube/source_code_link";
 $youtube-red: #ff0000;
 $youtube-dark-red: #c00;
 $yt-black: #282828;
@@ -20,33 +20,6 @@ $text-secondary: #666;
 $bg-light: #f8f8f8;
 $white: #fff;
 $transition: all 0.3s ease;
-
-.fy-source-code-link {
-  display: inline-flex;
-  align-items: center;
-
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-
-  font-size: 18px;
-  line-height: 1;
-  font-family: 'Noto Sans HK', sans-serif;
-  font-weight: 400;
-
-  .fy-source-code-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    fill: currentColor;
-    display: block;
-  }
-
-  span {
-    display: inline-block;
-    position: relative;
-    top: -1px;
-  }
-}
 
 /* For mobile responsiveness */
 @media (max-width: 768px) {
