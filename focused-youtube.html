@@ -49,7 +49,9 @@ permalink: focused-youtube
           <span>Add to Edge</span>
         </button>
 
-        <div class="fy-hero__version">v3.5 — released 20 days ago</div>
+        <div class="fy-hero__version">
+          v3.5 — released <span data-release-date="2025-03-30">2 days ago</span>
+        </div>
       </div>
 
       <a href="https://github.com/makaroni4/focused_youtube" target="_blank" class="fy-source-code-link">
@@ -174,5 +176,25 @@ permalink: focused-youtube
         });
       });
     });
+
+    // Update release date text
+    const releaseDateSpan = document.querySelector('[data-release-date]');
+    if (releaseDateSpan) {
+      const releaseDate = new Date(releaseDateSpan.dataset.releaseDate);
+      const today = new Date();
+      const diffTime = Math.abs(today - releaseDate);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      let releaseDateText;
+      if (diffDays === 0) {
+        releaseDateText = 'today';
+      } else if (diffDays === 1) {
+        releaseDateText = '1 day ago';
+      } else {
+        releaseDateText = `${diffDays} days ago`;
+      }
+
+      releaseDateSpan.textContent = releaseDateText;
+    }
   });
 </script>
