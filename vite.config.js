@@ -1,39 +1,41 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import svgLoader from 'vite-svg-loader';
-import { resolve } from 'path';
+import path from 'path';
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    svgLoader()
-  ],
+  plugins: [vue(), svgLoader()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src')
-    }
-  },
-  build: {
-    outDir: 'dist',
-    rollupOptions: {
-      output: {
-        entryFileNames: 'js/main.js',
-        chunkFileNames: 'js/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
-          if (/\.(css)$/i.test(assetInfo.name)) {
-            return `css/[name]-[hash].[ext]`;
-          }
-          return `assets/[name]-[hash].[ext]`;
-        }
-      }
-    }
+      '@': path.resolve(__dirname, './src'),
+    },
   },
   css: {
     preprocessorOptions: {
       scss: {
-        includePaths: [resolve(__dirname, 'src/assets/css')]
+        includePaths: [path.resolve(__dirname, 'src/assets/css')]
+      }
+    }
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'src/main.js')
+      },
+      output: {
+        entryFileNames: 'js/[name].js',
+        chunkFileNames: 'js/[name].js',
+        assetFileNames: ({name}) => {
+          if (/\.(gif|jpe?g|png|svg)$/.test(name ?? '')) {
+            return 'images/[name][extname]'
+          }
+
+          if (/\.css$/.test(name ?? '')) {
+            return 'css/[name][extname]'
+          }
+
+          return 'assets/[name][extname]'
+        }
       }
     }
   },
