@@ -6,9 +6,26 @@ keywords: youtube, distraction, focus, extension, browser, chrome, firefox, edge
 permalink: focused-youtube
 ---
 
-{% include focused-youtube/navbar.html %}
-{% include focused-youtube/hero.html %}
-{% include focused-youtube/stats.html %}
-{% include focused-youtube/features.html %}
-{% include focused-youtube/footer.html %}
+<div class="fy-lp">
+  <div class="fy-lp__navbar">
+    {% include focused-youtube/navbar.html %}
+  </div>
+
+  <div class="fy-lp__hero">
+    {% include focused-youtube/hero.html %}
+  </div>
+
+  <div class="fy-lp__stats">
+    {% include focused-youtube/stats.html %}
+  </div>
+
+  <div class="fy-lp__features">
+    {% include focused-youtube/features.html %}
+  </div>
+
+  <div class="fy-lp__footer">
+    {% include focused-youtube/footer.html %}
+  </div>
+</div>
+
 {% include focused-youtube/scripts.html %}
