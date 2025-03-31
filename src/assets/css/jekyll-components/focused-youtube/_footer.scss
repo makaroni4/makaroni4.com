@@ -1,25 +1,27 @@
 .fy-footer {
-  padding: 48px 0 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: $px32 0 0;
+
+  border-top: $px1 solid $grey-9;
 
   &__content {
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 $px24;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @media (max-width: 640px) {
-      flex-direction: column;
-      gap: 16px;
-      text-align: center;
-    }
+    flex-direction: column;
   }
 
   &__links {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    flex-direction: column;
+    gap: $px16;
+  }
+
+  &__copyright {
+    margin-bottom: $px16;
+  }
+
+  &__separator {
+    display: none;
   }
 
   &__heart {
@@ -31,6 +33,28 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  @include breakpoint($sm) {
+    padding: $px48 0 0;
+
+    &__copyright {
+      margin-bottom: 0;
+    }
+
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__links {
+      flex-direction: row;
+      gap: $px16;
+    }
+
+    &__separator {
+      display: block;
     }
   }
 }
