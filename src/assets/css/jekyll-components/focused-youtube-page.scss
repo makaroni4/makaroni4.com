@@ -26,7 +26,6 @@ $transition: all 0.3s ease;
   }
 
   &__features {
-    margin-bottom: 80px;
   }
 }
 
@@ -273,4 +272,52 @@ $transition: all 0.3s ease;
       margin-top: 12px;
     }
   }
+}
+
+.fy-footer {
+  padding: 48px 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+  &__content {
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+  }
+
+  &__copyright {
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__made-by {
+  }
+
+  &__heart {
+    color: #ff0000;
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Add margin-bottom to the features section to create space before footer
+.fy-lp__features {
+  margin-bottom: 80px;
 }
